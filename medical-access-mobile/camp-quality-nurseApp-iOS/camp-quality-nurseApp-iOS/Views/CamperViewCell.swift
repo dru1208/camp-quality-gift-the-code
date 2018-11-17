@@ -30,7 +30,9 @@ class CamperViewCell: UITableViewCell {
         self.camper = camper
         camperNameLabel.text = self.camper?.name
         camperImage.image = self.camper?.image
-        camperImage.image?
+        camperImage.layer.cornerRadius = 5
+        camperImage.clipsToBounds = true
+    
     }
 
 }

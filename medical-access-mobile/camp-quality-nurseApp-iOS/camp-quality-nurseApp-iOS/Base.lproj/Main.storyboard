@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="camp_quality_nurseApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Z6P-TZ-Cdp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="4j8-IT-0i2"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CgP-MR-6gU">
-                                <rect key="frame" x="0.0" y="76" width="375" height="542"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="camperCell" rowHeight="78" id="hQ7-y3-qTy" customClass="CamperViewCell" customModule="camp_quality_nurseApp_iOS" customModuleProvider="target">
@@ -61,6 +61,7 @@
                                         <connections>
                                             <outlet property="camperImage" destination="mA4-4g-hHL" id="Klq-zG-wnl"/>
                                             <outlet property="camperNameLabel" destination="xby-kg-QUU" id="JID-bR-AjN"/>
+                                            <segue destination="Rte-tV-iKx" kind="show" identifier="toCamperDetail" id="A7F-nM-iQU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -82,7 +83,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ifa-vx-vne"/>
+                    <navigationItem key="navigationItem" id="OPO-E3-Nnw"/>
                     <connections>
                         <outlet property="camperTableView" destination="CgP-MR-6gU" id="RZh-rW-HFY"/>
                         <outlet property="searchBar" destination="Z6P-TZ-Cdp" id="ftt-bg-QXu"/>
@@ -90,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="888.30584707646187"/>
+            <point key="canvasLocation" x="137" y="1636"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="P3w-Tk-Ay2">
@@ -102,12 +103,135 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="4w3-04-YgO"/>
+                        <segue destination="d2y-L7-dDI" kind="relationship" relationship="viewControllers" id="4w3-04-YgO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OgB-xB-HwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Camper Detail View Controller-->
+        <scene sceneID="Vob-jd-RIr">
+            <objects>
+                <viewController id="Rte-tV-iKx" customClass="CamperDetailViewController" customModule="camp_quality_nurseApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dzq-GT-tWd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcO-wF-jix">
+                                <rect key="frame" x="0.0" y="64" width="375" height="133.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yci-zV-OsG">
+                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="133.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cll-C5-fii">
+                                                <rect key="frame" x="6.5" y="6.5" width="120" height="120"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yci-zV-OsG" secondAttribute="height" multiplier="1:1" id="1oK-Lr-GFK"/>
+                                            <constraint firstItem="Cll-C5-fii" firstAttribute="centerX" secondItem="yci-zV-OsG" secondAttribute="centerX" id="cLR-mm-xYl"/>
+                                            <constraint firstItem="Cll-C5-fii" firstAttribute="height" secondItem="yci-zV-OsG" secondAttribute="height" multiplier="0.9" id="kRK-b9-9FG"/>
+                                            <constraint firstItem="Cll-C5-fii" firstAttribute="width" secondItem="yci-zV-OsG" secondAttribute="width" multiplier="0.9" id="pLB-TE-AMP"/>
+                                            <constraint firstItem="Cll-C5-fii" firstAttribute="centerY" secondItem="yci-zV-OsG" secondAttribute="centerY" id="y7Y-gE-pqx"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ph-0D-5We">
+                                        <rect key="frame" x="133.5" y="0.0" width="241.5" height="133.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxw-vm-4Ae">
+                                                <rect key="frame" x="25" y="50" width="191.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Wxw-vm-4Ae" firstAttribute="leading" secondItem="5ph-0D-5We" secondAttribute="leading" constant="25" id="TUR-cZ-ysj"/>
+                                            <constraint firstItem="Wxw-vm-4Ae" firstAttribute="centerY" secondItem="5ph-0D-5We" secondAttribute="centerY" id="j0m-KO-3f1"/>
+                                            <constraint firstItem="Wxw-vm-4Ae" firstAttribute="centerX" secondItem="5ph-0D-5We" secondAttribute="centerX" id="s8Y-3N-6Im"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wxw-vm-4Ae" secondAttribute="trailing" constant="25" id="tHB-ve-kuS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="yci-zV-OsG" firstAttribute="height" secondItem="fcO-wF-jix" secondAttribute="height" id="4ZG-ep-SU5"/>
+                                    <constraint firstItem="5ph-0D-5We" firstAttribute="leading" secondItem="yci-zV-OsG" secondAttribute="trailing" id="BuA-1a-SFj"/>
+                                    <constraint firstAttribute="bottom" secondItem="yci-zV-OsG" secondAttribute="bottom" id="GdU-jE-OgT"/>
+                                    <constraint firstAttribute="trailing" secondItem="5ph-0D-5We" secondAttribute="trailing" id="Lsr-Fs-sTs"/>
+                                    <constraint firstItem="yci-zV-OsG" firstAttribute="leading" secondItem="fcO-wF-jix" secondAttribute="leading" id="Xlo-O6-FaT"/>
+                                    <constraint firstItem="yci-zV-OsG" firstAttribute="top" secondItem="fcO-wF-jix" secondAttribute="top" id="eoX-Nr-ra0"/>
+                                    <constraint firstItem="5ph-0D-5We" firstAttribute="top" secondItem="fcO-wF-jix" secondAttribute="top" id="ugU-5S-BSV"/>
+                                    <constraint firstAttribute="bottom" secondItem="5ph-0D-5We" secondAttribute="bottom" id="wLH-li-Xjt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0N0-2H-10l">
+                                <rect key="frame" x="0.0" y="551.5" width="375" height="66.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-VS-L8v">
+                                        <rect key="frame" x="69" y="15" width="237" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Show Medication Schedule"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="bgo-VS-L8v" firstAttribute="centerY" secondItem="0N0-2H-10l" secondAttribute="centerY" id="Kmf-cW-KFO"/>
+                                    <constraint firstItem="bgo-VS-L8v" firstAttribute="centerX" secondItem="0N0-2H-10l" secondAttribute="centerX" id="Zdu-U5-9tB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xo3-wA-78B">
+                                <rect key="frame" x="0.0" y="197.5" width="375" height="354"/>
+                                <color key="backgroundColor" red="0.8160493338" green="0.42091776720000001" blue="0.75031288819999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fcO-wF-jix" firstAttribute="height" secondItem="dzq-GT-tWd" secondAttribute="height" multiplier="1/5" id="6VC-mS-YyI"/>
+                            <constraint firstItem="0N0-2H-10l" firstAttribute="bottom" secondItem="CGb-Dn-5e8" secondAttribute="bottom" id="HNb-yU-1mn"/>
+                            <constraint firstItem="Xo3-wA-78B" firstAttribute="leading" secondItem="CGb-Dn-5e8" secondAttribute="leading" id="LAP-0x-FBI"/>
+                            <constraint firstItem="fcO-wF-jix" firstAttribute="trailing" secondItem="CGb-Dn-5e8" secondAttribute="trailing" id="OYQ-QX-Flz"/>
+                            <constraint firstItem="Xo3-wA-78B" firstAttribute="top" secondItem="fcO-wF-jix" secondAttribute="bottom" id="TbT-dR-xHU"/>
+                            <constraint firstItem="fcO-wF-jix" firstAttribute="top" secondItem="CGb-Dn-5e8" secondAttribute="top" id="Uvv-6f-kfv"/>
+                            <constraint firstItem="0N0-2H-10l" firstAttribute="leading" secondItem="CGb-Dn-5e8" secondAttribute="leading" id="Wah-eL-1do"/>
+                            <constraint firstItem="0N0-2H-10l" firstAttribute="trailing" secondItem="CGb-Dn-5e8" secondAttribute="trailing" id="ekZ-Nc-4wr"/>
+                            <constraint firstItem="0N0-2H-10l" firstAttribute="height" secondItem="dzq-GT-tWd" secondAttribute="height" multiplier="1/10" id="k5m-tx-toA"/>
+                            <constraint firstItem="0N0-2H-10l" firstAttribute="top" secondItem="Xo3-wA-78B" secondAttribute="bottom" id="kHB-BA-V5U"/>
+                            <constraint firstItem="fcO-wF-jix" firstAttribute="leading" secondItem="CGb-Dn-5e8" secondAttribute="leading" id="qIQ-q1-iAO"/>
+                            <constraint firstItem="CGb-Dn-5e8" firstAttribute="trailing" secondItem="Xo3-wA-78B" secondAttribute="trailing" id="y5P-9b-R9n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CGb-Dn-5e8"/>
+                    </view>
+                    <connections>
+                        <outlet property="camperNameLabel" destination="Wxw-vm-4Ae" id="kbe-4f-91n"/>
+                        <outlet property="camperimageView" destination="Cll-C5-fii" id="hvj-GG-Qu9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84C-ui-tCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="2412.1439280359823"/>
+        </scene>
+        <!--Campers-->
+        <scene sceneID="Hbs-R8-ixP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d2y-L7-dDI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Campers" id="ifa-vx-vne"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="08R-dD-YEZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jDf-6W-ze2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXe-z7-TwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="888.30584707646187"/>
         </scene>
     </scenes>
 </document>

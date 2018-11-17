@@ -18,6 +18,7 @@
 		46BFA7FC219FF8EE00F6DB3B /* Camper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA7FB219FF8EE00F6DB3B /* Camper.swift */; };
 		46BFA7FF219FFE5600F6DB3B /* CamperViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA7FE219FFE5600F6DB3B /* CamperViewCell.swift */; };
 		46BFA801219FFEE600F6DB3B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA800219FFEE600F6DB3B /* SearchViewController.swift */; };
+		46BFA80421A011D600F6DB3B /* CamperDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */; };
 		5ED8B691934D90C311456C4B /* Pods_camp_quality_nurseApp_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC99E7840BABDD8B96D64EB3 /* Pods_camp_quality_nurseApp_iOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		46BFA7FB219FF8EE00F6DB3B /* Camper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camper.swift; sourceTree = "<group>"; };
 		46BFA7FE219FFE5600F6DB3B /* CamperViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamperViewCell.swift; sourceTree = "<group>"; };
 		46BFA800219FFEE600F6DB3B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamperDetailViewController.swift; sourceTree = "<group>"; };
 		51BD11F52A219E8E7712DB30 /* Pods-camp-quality-nurseApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOS/Pods-camp-quality-nurseApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		95E46A8E5F20111256FC6191 /* Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOSTests/Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE8D37B336E93D02FDCC7477 /* Pods-camp-quality-nurseApp-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOSTests/Pods-camp-quality-nurseApp-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				46BFA800219FFEE600F6DB3B /* SearchViewController.swift */,
 				46BFA7FE219FFE5600F6DB3B /* CamperViewCell.swift */,
+				46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			files = (
 				46BFA801219FFEE600F6DB3B /* SearchViewController.swift in Sources */,
 				46BFA7FF219FFE5600F6DB3B /* CamperViewCell.swift in Sources */,
+				46BFA80421A011D600F6DB3B /* CamperDetailViewController.swift in Sources */,
 				46BFA7E1219FF20400F6DB3B /* camp_quality_nurseApp_iOS.xcdatamodeld in Sources */,
 				46BFA7DB219FF20400F6DB3B /* ViewController.swift in Sources */,
 				46BFA7D9219FF20400F6DB3B /* AppDelegate.swift in Sources */,
