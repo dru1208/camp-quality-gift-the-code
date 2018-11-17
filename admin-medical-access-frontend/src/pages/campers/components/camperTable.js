@@ -1,5 +1,5 @@
 import React from "react"
-import CamperEntry from "./camperEntry.js"
+import CamperEntry from "./camperEntry"
 
 const CamperTable = props => {
 
@@ -12,6 +12,7 @@ const CamperTable = props => {
       <thead>
         <tr>
           <th>Name</th>
+          <th>Camper ID</th>
           <th>Most Recent Medicine Administered</th>
           <th>Condition</th>
           <th></th>

@@ -12,9 +12,11 @@ import Home from "./pages/landingPage/index"
 // session selection
 import SessionSelection from "./pages/sessionSelection/index"
 
-// camper list
+// campers list
 import Campers from "./pages/campers/index"
 
+// camper profile
+import CamperProfile from "./pages/camperProfile/index"
 
 
 const testSessions = [{id: 1, startDate: "12/20/20", endDate: "12/27/20"}, {id: 2, startDate: "1/5/18", endDate: "1/12/18"}]
@@ -105,7 +107,8 @@ class App extends Component {
         <Switch>
           <Route exact path="/" render={() => <Home handleLogin={this._handleLogin} /> } />
           <Route path="/session_select" render={() => <SessionSelection campLocation={this.state.campLocation} sessions={this.state.sessions} handleSessionSelection={this._handleSessionSelection} /> } />
-          <Route path="/camper_list" render={() => <Campers campers={this.state.campers} /> } />
+          <Route exact path="/camper_list" render={() => <Campers campers={this.state.campers} /> } />
+          <Route path="/camper_profile" render={() => <CamperProfile url={this.props.location.pathname}/> }/>
         </Switch>
 
       </Router>
