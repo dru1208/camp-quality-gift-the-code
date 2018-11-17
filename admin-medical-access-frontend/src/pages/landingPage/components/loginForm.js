@@ -1,6 +1,6 @@
 import React from "react"
 
-const LoginForm = () => (
+const LoginForm = props => (
   <form>
     <label for="username">Username:</label>
     <input type="text" name="username" />
