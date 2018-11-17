@@ -75,27 +75,29 @@ class App extends Component {
       currentSessionID: e.target.sessionID.value
     }, () => {
 
-      const options = {
-        method: "POST",
-        headers: {'content-type': 'application/json'},
-        data: this.state.currentSessionID,
-        url: ''
-      }
+      history.push("/camper_list")
 
-      axios(options)
-        .then(response => {
-          if (response.data.length > 0) {
-            this.setState({
-              // campers: response.data
-              campers: campers
-            }, () => {
-              history.push("/camper_list")
-            })
-          }
-        })
-        .catch((err) => {
-          throw err
-        })
+      // const options = {
+      //   method: "POST",
+      //   headers: {'content-type': 'application/json'},
+      //   data: this.state.currentSessionID,
+      //   url: ''
+      // }
+
+      // axios(options)
+      //   .then(response => {
+      //     if (response.data.length > 0) {
+      //       this.setState({
+      //         // campers: response.data
+      //         campers: campers
+      //       }, () => {
+      //         history.push("/camper_list")
+      //       })
+      //     }
+      //   })
+      //   .catch((err) => {
+      //     throw err
+      //   })
 
     })
   }
@@ -106,9 +108,9 @@ class App extends Component {
       <Router history={ history } >
         <Switch>
           <Route exact path="/" render={() => <Home handleLogin={this._handleLogin} /> } />
-          <Route path="/session_select" render={() => <SessionSelection campLocation={this.state.campLocation} sessions={this.state.sessions} handleSessionSelection={this._handleSessionSelection} /> } />
+          <Route exact path="/session_select" render={() => <SessionSelection campLocation={this.state.campLocation} sessions={this.state.sessions} handleSessionSelection={this._handleSessionSelection} /> } />
           <Route exact path="/camper_list" render={() => <Campers campers={this.state.campers} /> } />
-          <Route path="/camper_profile" render={() => <CamperProfile url={this.props.location.pathname}/> }/>
+          <Route path="/camper_profile/" render={() => <CamperProfile /> }/>
         </Switch>
 
       </Router>
