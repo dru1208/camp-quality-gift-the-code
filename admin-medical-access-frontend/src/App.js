@@ -9,8 +9,24 @@ import { Router, Route, Switch } from 'react-router-dom';
 // landing page
 import Home from "./pages/landingPage/index"
 
-// sessionSelection
+// session selection
 import SessionSelection from "./pages/sessionSelection/index"
+
+// camper list
+import Campers from "./pages/campers/index"
+
+
+
+const testSessions = [{id: 1, startDate: "12/20/20", endDate: "12/27/20"}, {id: 2, startDate: "1/5/18", endDate: "1/12/18"}]
+const campers =
+[
+  {id: 1, firstName: "john", lastName: "doe", disease: "skin cancer", medAdministered: true, },
+  {id: 2, firstName: "susan", lastName: "sue", disease: "breast cancer", medAdministered: false, },
+  {id: 3, firstName: "ryan", lastName: "ray", disease: "testicular cancer", medAdministered: false, },
+  {id: 3, firstName: "joe", lastName: "john", disease: "none", medAdministered: true, },
+]
+
+
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +34,10 @@ class App extends Component {
     this.state = {
       isLoggedIn: false,
       campLocation: "test",
-
+      currentSessionInfo: {},
+      sessions: testSessions,
+      currentSessionID: "",
+      campers: campers
     }
   }
 
@@ -32,7 +51,7 @@ class App extends Component {
       method: "POST",
       headers: {'content-type': 'application/json'},
       data: loginInfo,
-      url: 'http://localhost:3000/api/login'
+      url: ''
     }
     axios(options)
       .then(response => {
@@ -48,12 +67,45 @@ class App extends Component {
 
   }
 
+  _handleSessionSelection = e => {
+    e.preventDefault()
+    this.setState({
+      currentSessionID: e.target.sessionID.value
+    }, () => {
+
+      const options = {
+        method: "POST",
+        headers: {'content-type': 'application/json'},
+        data: this.state.currentSessionID,
+        url: ''
+      }
+
+      axios(options)
+        .then(response => {
+          if (response.data.length > 0) {
+            this.setState({
+              // campers: response.data
+              campers: campers
+            }, () => {
+              history.push("/camper_list")
+            })
+          }
+        })
+        .catch((err) => {
+          throw err
+        })
+
+    })
+  }
+
+
   render() {
     return (
       <Router history={ history } >
         <Switch>
           <Route exact path="/" render={() => <Home handleLogin={this._handleLogin} /> } />
-          <Route path="/session_select" render={() => <SessionSelection campLocation={this.state.campLocation} /> } />
+          <Route path="/session_select" render={() => <SessionSelection campLocation={this.state.campLocation} sessions={this.state.sessions} handleSessionSelection={this._handleSessionSelection} /> } />
+          <Route path="/camper_list" render={() => <Campers campers={this.state.campers} /> } />
         </Switch>
 
       </Router>

@@ -1,34 +1,21 @@
-import React, { Component } from "react"
+import React from "react"
 
-class SessionRadioMenu extends Component {
+const SessionRadioMenu = props => {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      sessionID: "",
-    }
-  }
+  const generateSessions = props.sessions.map((sessionInfo, index) => {
+    return <option key={index} value={sessionInfo.id}>{`${props.campLocation}: ${sessionInfo.startDate} to ${sessionInfo.endDate}`}</option>
+  })
 
-  _handleSessionSelection = (e) => {
-    e.preventDefault()
-  }
-
-  render() {
-    const generateSessions = this.props.sessions.map((sessionInfo, index) => {
-      return <option value={sessionInfo.id}>{`${this.props.campLocation}: ${sessionInfo.startDate} to ${sessionInfo.endDate}`}</option>
-    })
-
-    return (
-      <div>
-        <form onSubmit={this._handleSessionSelection}>
-          <select>
-            { generateSessions }
-          </select>
-          <input type="submit" value="Select Session" />
-        </form>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <form onSubmit={props.handleSessionSelection}>
+        <select name="sessionID">
+          { generateSessions }
+        </select>
+        <input type="submit" value="Select Session" />
+      </form>
+    </div>
+  )
 }
 
 export default SessionRadioMenu
