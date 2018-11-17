@@ -1,0 +1,16 @@
+.navbar {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+
+}
+.navbar > li {
+  color: blue;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.navbar > li:hover {
+  color: violet;
+  cursor: pointer;
+}
