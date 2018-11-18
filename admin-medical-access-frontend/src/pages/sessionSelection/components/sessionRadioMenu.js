@@ -7,7 +7,7 @@ const SessionRadioMenu = props => {
   })
 
   return (
-    <div>
+    <div className="sessionContainer">
       <form onSubmit={props.handleSessionSelection}>
         <select name="sessionID">
           { generateSessions }
