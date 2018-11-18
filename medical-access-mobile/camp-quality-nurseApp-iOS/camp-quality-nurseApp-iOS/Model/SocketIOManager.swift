@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SocketIOManager.swift
 //  camp-quality-nurseApp-iOS
 //
 //  Created by Wiljay Flores on 2018-11-17.
@@ -7,14 +7,8 @@
 //
 
 import UIKit
+import SocketIO
 
-class ViewController: UIViewController {
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
+class SocketIOManager: NSObject {
 
 }
-
