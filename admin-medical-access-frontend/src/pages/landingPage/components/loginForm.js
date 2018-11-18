@@ -32,18 +32,8 @@ const LoginForm = props => {
           </button>
         </div>
       </div>
+  </form>
+)}
 
-      <div className="text-center p-t-115">
-        <span className="txt1">
-          Don’t have an account?
-        </span>
-
-        <a className="txt2" href="#">
-          Sign Up
-        </a>
-      </div>
-    </form>
-  )
-}
 
 export default LoginForm;
