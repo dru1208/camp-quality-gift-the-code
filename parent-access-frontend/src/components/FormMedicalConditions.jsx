@@ -7,7 +7,7 @@ import React from "react"
 const FormMedicalConditions = props => {
   return (
     <div>
-
+      <h3>Medical Conditions</h3>
       <div>Fill out any pre-existing medical conditions</div>
       <div>
         <label htmlFor="aidsHIVBoolean">Aids/HIV</label>

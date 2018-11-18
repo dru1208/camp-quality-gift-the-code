@@ -3,7 +3,33 @@ import React, { Component } from 'react';
 export default class FormInfo extends Component {
   constructor(props){
     super(props)
-    this.state = { firstName: "", lastName: "", nickname: "", preferredPronoun: "", afterSchoolAndWeekendActivity: "", faveMovieMusicFood: "", ifICould: "", needToKnow: "", lookingForwardTo: "", bestCampEverIf: "", shirtSize: "", cqAmbassador: true, camperStatus: "", familyDoctor: "", oncologistSpecialist: "", hospital: "", stayingPositive: "", tryingNewThings: "", interactingWithPeers: "", makingCloseFriendships: "", developingHobbiesInterest: "", overcomingObstacles: "", selfCare: "", oneToOneSupport: false, IEP: false, travelArrangements: "" };
+    this.state = {
+      firstName: "",
+      lastName: "",
+      preferredName: "",
+      preferredPronoun: "",
+      afterSchoolAndWeekendActivity: "",
+      faveMovieMusicFood: "",
+      ifICould: "",
+      needToKnow: "",
+      lookingForwardTo: "",
+      bestCampEverIf: "",
+      shirtSize: "extra-small",
+      cqAmbassador: true,
+      camperStatus: "returning_sibling",
+      familyDoctor: "",
+      oncologistSpecialist: "",
+      hospital: "",
+      stayingPositive: "every",
+      tryingNewThings: "every",
+      interactingWithPeers: "every",
+      makingCloseFriendships: "every",
+      developingHobbiesInterest: "every",
+      overcomingObstacles: "every",
+      selfCare: "every",
+      oneToOneSupport: true,
+      IEP: true,
+      travelArrangements: "" };
   }
 
   handleChange = prop => event => {
@@ -262,7 +288,7 @@ export default class FormInfo extends Component {
               <label htmlFor="travelArrangements">
                 How would you reach the camp grounds?
               </label>
-              <input type="textarea" required />
+  preferredName: "",")}/>
             </div>
 
             <input type="submit" value="Submit" />

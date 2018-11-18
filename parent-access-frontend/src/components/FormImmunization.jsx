@@ -5,8 +5,9 @@ const FormImmunization = props => {
 
   return (
     <div className="immunizationForm">
+      <h3>Immunizations</h3>
       <div>
-        <label htmlFor="chickenPox"></label>
+        <label htmlFor="chickenPox">Chicken Pox</label>
         <select name="chickenPox">
           <option value={true}>Yes</option>
           <option value={false}>No</option>

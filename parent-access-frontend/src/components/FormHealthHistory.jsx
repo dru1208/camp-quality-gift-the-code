@@ -3,6 +3,7 @@ import React from "react"
 
 const FormHealthHistory = props => (
   <div>
+    <h3>Health History</h3>
     <div>
       <label>Operations: has your child had any operations?</label>
       <select name="operationsBoolean">

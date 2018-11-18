@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import LoginForm from './Login.jsx'
 import RegistrationForm from './Signup.jsx'
 
-
 class Welcome extends Component {
 
   constructor(props) {
