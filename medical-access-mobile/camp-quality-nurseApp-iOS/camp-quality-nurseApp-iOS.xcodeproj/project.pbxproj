@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		0FEAE6B3B51EC6C7A89F8291 /* Pods_camp_quality_nurseApp_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05202FDD32AC6A272F125002 /* Pods_camp_quality_nurseApp_iOSTests.framework */; };
 		1461C5BDEB729235E83B7BDF /* Pods_camp_quality_nurseApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5ECC36F1587737DE2EC7186 /* Pods_camp_quality_nurseApp_iOS.framework */; };
-		46BDD3BB21A1887B00B542BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46BDD3BA21A1887B00B542BE /* GoogleService-Info.plist */; };
+		46BDD3C221A1939E00B542BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46BDD3C121A1939E00B542BE /* GoogleService-Info.plist */; };
+		46BDD3C421A1C8A000B542BE /* TreatmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDD3C321A1C8A000B542BE /* TreatmentDetailViewController.swift */; };
 		46BFA7D9219FF20400F6DB3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA7D8219FF20400F6DB3B /* AppDelegate.swift */; };
 		46BFA7DB219FF20400F6DB3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA7DA219FF20400F6DB3B /* ViewController.swift */; };
 		46BFA7DE219FF20400F6DB3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BFA7DC219FF20400F6DB3B /* Main.storyboard */; };
@@ -22,7 +23,6 @@
 		46BFA80421A011D600F6DB3B /* CamperDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */; };
 		46BFA80621A0541900F6DB3B /* Treatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA80521A0541900F6DB3B /* Treatment.swift */; };
 		46BFA81021A13F1000F6DB3B /* TreatmentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA80F21A13F1000F6DB3B /* TreatmentViewCell.swift */; };
-		46BFA81221A1516F00F6DB3B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA81121A1516F00F6DB3B /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,8 @@
 /* Begin PBXFileReference section */
 		05202FDD32AC6A272F125002 /* Pods_camp_quality_nurseApp_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_camp_quality_nurseApp_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5F618A8E895130E99DD978 /* Pods-camp-quality-nurseApp-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOSTests/Pods-camp-quality-nurseApp-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		46BDD3BA21A1887B00B542BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		46BDD3C121A1939E00B542BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		46BDD3C321A1C8A000B542BE /* TreatmentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentDetailViewController.swift; sourceTree = "<group>"; };
 		46BFA7D5219FF20400F6DB3B /* camp-quality-nurseApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "camp-quality-nurseApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BFA7D8219FF20400F6DB3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46BFA7DA219FF20400F6DB3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamperDetailViewController.swift; sourceTree = "<group>"; };
 		46BFA80521A0541900F6DB3B /* Treatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treatment.swift; sourceTree = "<group>"; };
 		46BFA80F21A13F1000F6DB3B /* TreatmentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentViewCell.swift; sourceTree = "<group>"; };
-		46BFA81121A1516F00F6DB3B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		4F85BB177959EE8DF70CA923 /* Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOSTests/Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DFE297AD045AEC174C32533 /* Pods-camp-quality-nurseApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOS/Pods-camp-quality-nurseApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A0E42B3327261B390F929642 /* Pods-camp-quality-nurseApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOS/Pods-camp-quality-nurseApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,7 +116,6 @@
 		46BFA7D7219FF20400F6DB3B /* camp-quality-nurseApp-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				46BDD3BA21A1887B00B542BE /* GoogleService-Info.plist */,
 				46BFA7D8219FF20400F6DB3B /* AppDelegate.swift */,
 				46BFA7DA219FF20400F6DB3B /* ViewController.swift */,
 				46BFA7DC219FF20400F6DB3B /* Main.storyboard */,
@@ -125,6 +124,7 @@
 				46BFA7E2219FF20500F6DB3B /* Assets.xcassets */,
 				46BFA7E4219FF20500F6DB3B /* LaunchScreen.storyboard */,
 				46BFA7E7219FF20500F6DB3B /* Info.plist */,
+				46BDD3C121A1939E00B542BE /* GoogleService-Info.plist */,
 			);
 			path = "camp-quality-nurseApp-iOS";
 			sourceTree = "<group>";
@@ -143,7 +143,6 @@
 			children = (
 				46BFA7FB219FF8EE00F6DB3B /* Camper.swift */,
 				46BFA80521A0541900F6DB3B /* Treatment.swift */,
-				46BFA81121A1516F00F6DB3B /* FirebaseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +153,7 @@
 				46BFA800219FFEE600F6DB3B /* SearchViewController.swift */,
 				46BFA7FE219FFE5600F6DB3B /* CamperViewCell.swift */,
 				46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */,
+				46BDD3C321A1C8A000B542BE /* TreatmentDetailViewController.swift */,
 				46BFA80F21A13F1000F6DB3B /* TreatmentViewCell.swift */,
 			);
 			path = Views;
@@ -253,7 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46BFA7E6219FF20500F6DB3B /* LaunchScreen.storyboard in Resources */,
-				46BDD3BB21A1887B00B542BE /* GoogleService-Info.plist in Resources */,
+				46BDD3C221A1939E00B542BE /* GoogleService-Info.plist in Resources */,
 				46BFA7E3219FF20500F6DB3B /* Assets.xcassets in Resources */,
 				46BFA7DE219FF20400F6DB3B /* Main.storyboard in Resources */,
 			);
@@ -349,12 +349,12 @@
 				46BFA801219FFEE600F6DB3B /* SearchViewController.swift in Sources */,
 				46BFA81021A13F1000F6DB3B /* TreatmentViewCell.swift in Sources */,
 				46BFA7FF219FFE5600F6DB3B /* CamperViewCell.swift in Sources */,
-				46BFA81221A1516F00F6DB3B /* FirebaseManager.swift in Sources */,
 				46BFA80421A011D600F6DB3B /* CamperDetailViewController.swift in Sources */,
 				46BFA7DB219FF20400F6DB3B /* ViewController.swift in Sources */,
 				46BFA7D9219FF20400F6DB3B /* AppDelegate.swift in Sources */,
 				46BFA80621A0541900F6DB3B /* Treatment.swift in Sources */,
 				46BFA7FC219FF8EE00F6DB3B /* Camper.swift in Sources */,
+				46BDD3C421A1C8A000B542BE /* TreatmentDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

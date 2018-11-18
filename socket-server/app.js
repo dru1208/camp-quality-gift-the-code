@@ -11,6 +11,7 @@ const io = require('socket.io').listen(server);
 io.on('connection', function (socket) {
   console.log('A client is connected!');
   socket.on("confirmConnection", (data) => {
+    console.log("hi")
     console.log(data.origin)
     socket.join(data.origin)
     // io.to("adminMedicalMobile").emit("hello")

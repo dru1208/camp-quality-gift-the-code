@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
@@ -18,7 +19,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     var campers: [Camper]?
     var filteredCampers: [Camper]?
-    let database = FirebaseManager.shared
+    let database = DatabaseReference()
    
     
 
@@ -28,6 +29,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         
         configureDatabase()
+        self.campers = []
         self.filteredCampers = []
         searchBar.delegate = self
         
@@ -42,14 +44,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return campers?.count ?? 0
 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "camperCell") as! CamperViewCell
         
-
+        cell.configureCell(camper: campers![indexPath.row])
         
         return cell
     }
@@ -70,12 +72,29 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func configureDatabase() {
+        let database = Database.database().reference()
         
-        database.reference.child("camper").observe(.childAdded) { (DataSnapshot) in
-           print(DataSnapshot.value)
+        database.child("camper/").observe(.childAdded) { (DataSnapshot) in
+            let dict = DataSnapshot.value as! NSDictionary
+            let id = DataSnapshot.key
+            self.createCampers(camper: dict,id: id)
         }
     
- }
+    }
+    
+    func createCampers(camper: NSDictionary, id: String) {
+        let allergies = camper["allergy"] as! String
+        let firstName = camper["firstName"] as! String
+        let lastName = camper["lastName"] as! String
+        let notes = camper["notes"] as! String
+        let otcPermitted = camper["otcPermitted"] as! Bool
+        let primaryDiagnosis = camper["primaryDiagnosis"] as! String
+        
+        self.campers?.append(Camper(id: id, firstName: firstName, lastName: lastName, primaryDiagnosis: primaryDiagnosis, notes: notes, otcPremitted: otcPermitted, allergies: allergies))
+        
+        camperTableView.reloadData()
+        
+    }
 
 }
     
