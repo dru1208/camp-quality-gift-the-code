@@ -31,15 +31,15 @@ class TreatmentDetailViewController: UIViewController {
     
     @IBAction func updatePressed(_ sender: UIButton) {
         
-        if (treatment?.beenAdministered)! {
-            updateButton.setTitle("Press To Update", for: .normal)
-            database.child("treatment/" + (camperID ?? "") + "/" + (treatment?.sessionID + "/")).setValue(["beenAdministered": false])
-            treatment?.beenAdministered = false
-        } else {
-            updateButton.setTitle("Administered!", for: .normal)
-            database.child("treatment/" + (camperID ?? "") + "/" + (treatment?.sessionID + "/")).setValue(["beenAdministered": true])
-            treatment?.beenAdministered = true
-        }
+//        if (treatment?.beenAdministered)! {
+//            updateButton.setTitle("Press To Update", for: .normal)
+//            database.child("treatment/" + (camperID ?? "") + "/" + (treatment?.sessionID + "/")).setValue(["beenAdministered": false])
+//            treatment?.beenAdministered = false
+//        } else {
+//            updateButton.setTitle("Administered!", for: .normal)
+//            database.child("treatment/" + (camperID ?? "") + "/" + (treatment?.sessionID + "/")).setValue(["beenAdministered": true])
+//            treatment?.beenAdministered = true
+//        }
     }
     
 }
