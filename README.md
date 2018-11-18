@@ -1,6 +1,6 @@
 
-# Vera x Medbay 
-This project was created as part of the Gift the Code hackathon for Camp Quality. Camp Quality is a national charitable organization devoted to providing free camp experiences and year-round programming for children with cancer. Currently, they face many inefficiencies with the way that they track their campers's medical requirements during camp. Their data is only accessible on paper and therefore not always up to date, making registering campers and logging their medications a tedious process. 
+# Vera x Medbay
+This project was created as part of the Gift the Code hackathon for Camp Quality. Camp Quality is a national charitable organization devoted to providing free camp experiences and year-round programming for children with cancer. Currently, they face many inefficiencies with the way that they track their campers's medical requirements during camp. Their data is only accessible on paper and therefore not always up to date, making registering campers and logging their medications a tedious process.
 Vera & Medbay is an integrated platform that delivers real-time, data-driven medical administration. Our platform addresses Camp Quality's inefficiencies by streamlining Camp Quality's registration process, digitizing all form data, and providing an up-to-date platform for real-time medication/treatment administration and tracking.
 
 # Tech/Framework Used
@@ -17,6 +17,9 @@ Our platform is two-fold; Vera is a web CRM application where parents/guardians 
 # Installation
 1. Clone the files using git clone
 2. Run ```npm install``` to download all dependencies
+
+# Presentation Slides
+https://docs.google.com/presentation/d/1N0c35ZIVqEsOhfKTbbUEf5YCYuRXZo88_sx_vlDEARs/edit?usp=sharing
 
 # Team
 [Andrew Hsieh](https://github.com/dru1208), [Chris Lo](https://github.com/chrislo7), [Kyla Palos](https://github.com/kpalosot), [Vincent Ly](https://github.com/veely), [Wiljay Flores](https://github.com/Rusevine), [Carmen Tsang](https://www.linkedin.com/in/ctsang11/) & [Rachel Siu](https://www.linkedin.com/in/rachelsiu/)
