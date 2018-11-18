@@ -6,6 +6,8 @@ import history from "./history"
 import { Router, Route, Switch } from 'react-router-dom';
 
 
+import { parseJwt } from "./shared/utils"
+
 // landing page
 import Home from "./pages/landingPage/index"
 
@@ -19,15 +21,6 @@ import Campers from "./pages/campers/index"
 import CamperProfile from "./pages/camperProfile/index"
 
 
-const testSessions = [{id: 1, startDate: "12/20/20", endDate: "12/27/20"}, {id: 2, startDate: "1/5/18", endDate: "1/12/18"}]
-const campers =
-[
-  {id: 1, firstName: "john", lastName: "doe", disease: "skin cancer", medAdministered: true, },
-  {id: 2, firstName: "susan", lastName: "sue", disease: "breast cancer", medAdministered: false, },
-  {id: 3, firstName: "ryan", lastName: "ray", disease: "testicular cancer", medAdministered: false, },
-  {id: 3, firstName: "joe", lastName: "john", disease: "none", medAdministered: true, },
-]
-
 
 
 class App extends Component {
@@ -35,11 +28,12 @@ class App extends Component {
     super(props)
     this.state = {
       isLoggedIn: false,
-      campLocation: "test",
+      campLocation: "",
       currentSessionInfo: {},
-      sessions: testSessions,
+      sessions: [],
       currentSessionID: "",
-      campers: campers
+      campers: [],
+      jwt: ""
     }
   }
 
@@ -53,14 +47,17 @@ class App extends Component {
       method: "POST",
       headers: {'content-type': 'application/json'},
       data: loginInfo,
-      url: 'http://localhost:3002/login/'
+      url: 'http://localhost:3002/api/login/admin'
     }
     axios(options)
       .then(response => {
-        if (response.data.valid) {
+        if (response.data.success) {
+          const decodedPayload = parseJwt(response.data.token)
           this.setState({
             isLoggedIn: true,
-            campLocation: this.campLocation
+            campLocation: decodedPayload.campLocation,
+            jwt: response.data.token,
+            sessions: response.data.sessions
           }, () => {
             history.push("/session_select")
           })
@@ -73,30 +70,30 @@ class App extends Component {
     this.setState({
       currentSessionID: e.target.sessionID.value
     }, () => {
-
-      history.push("/camper_list")
-
-      // const options = {
-      //   method: "POST",
-      //   headers: {'content-type': 'application/json'},
-      //   data: this.state.currentSessionID,
-      //   url: ''
-      // }
-
-      // axios(options)
-      //   .then(response => {
-      //     if (response.data.length > 0) {
-      //       this.setState({
-      //         // campers: response.data
-      //         campers: campers
-      //       }, () => {
-      //         history.push("/camper_list")
-      //       })
-      //     }
-      //   })
-      //   .catch((err) => {
-      //     throw err
-      //   })
+      const options = {
+        method: "POST",
+        headers: {'content-type': 'application/json'},
+        data: { currentSessionID: this.state.currentSessionID },
+        url: 'http://localhost:3002/api/session_selection'
+      }
+      console.log("options set")
+      axios(options)
+        .then(response => {
+          console.log("response 1")
+          if (response.data.campers.length > 0) {
+            console.log("response received")
+            this.setState({
+              // campers: response.data
+              campers: response.data.campers
+            }, () => {
+              console.log("state set")
+              history.push("/camper_list")
+            })
+          }
+        })
+        .catch((err) => {
+          throw err
+        })
 
     })
   }
