@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import history from './history.jsx';
+import './App.css';
 import {
   withRouter,
   Router,
