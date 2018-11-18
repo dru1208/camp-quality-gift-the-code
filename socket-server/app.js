@@ -10,13 +10,11 @@ const io = require('socket.io').listen(server);
 
 io.on('connection', function (socket) {
   console.log('A client is connected!');
-  if (socket.handshake.query.user == "admin_medical") {
-    socket.join("admin_medical")
-  } else if (socket.handshake.query.user == "parent") {
-    socket.join("parent")
-  } else {
-    console.log("user type not known")
-  }
+  socket.on("confirmConnection", (data) => {
+    console.log(data.origin)
+    socket.join(data.origin)
+    // io.to("adminMedicalMobile").emit("hello")
+  })
 });
 
 
