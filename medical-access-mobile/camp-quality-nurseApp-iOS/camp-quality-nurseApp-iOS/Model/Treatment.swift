@@ -8,14 +8,14 @@
 
 import UIKit
 
-class Activity: NSObject {
+class Treatment: NSObject {
     var name: String
-    var time: NSDate
+    var time: String
     var isCompleted: Bool
     var details: String
     var notes: String
     
-    init(name: String, time: NSDate, details: String, notes: String, isCompleted: Bool) {
+    init(name: String, time: String, details: String, notes: String, isCompleted: Bool) {
         self.name = name
         self.time = time
         self.details = details

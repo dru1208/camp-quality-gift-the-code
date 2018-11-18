@@ -21,15 +21,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let camper1 = Camper(id: "1", name: "John Doe", allergies: ["peanut","advil"], cabin: "2B", image: UIImage(named: "c1")!)
-        let camper2 = Camper(id: "2", name: "Jane Doe", allergies: ["acetaminophen"], cabin: "5G", image: UIImage(named: "c3")!)
-        let camper3 = Camper(id: "3", name: "Johnny D", allergies: [""], cabin: "2B", image: UIImage(named: "c2")!)
-        let camper4 = Camper(id: "4", name: "Janey D", allergies: [""], cabin: "5G", image: UIImage(named: "c4")!)
         
-        self.campers = [camper1,camper2,camper3,camper4]
+        fakeData()
         self.filteredCampers = []
-        
         searchBar.delegate = self
         
         
@@ -80,6 +74,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         camperTableView.reloadData()
 
+    }
+    
+    func fakeData() {
+        let camper1 = Camper(id: "1", name: "John Doe", allergies: ["peanut","advil"], cabin: "2B", image: UIImage(named: "c1")!)
+        let camper2 = Camper(id: "2", name: "Jane Doe", allergies: ["acetaminophen"], cabin: "5G", image: UIImage(named: "c3")!)
+        let camper3 = Camper(id: "3", name: "Johnny D", allergies: [""], cabin: "2B", image: UIImage(named: "c2")!)
+        let camper4 = Camper(id: "4", name: "Janey D", allergies: [""], cabin: "5G", image: UIImage(named: "c4")!)
+        
+        self.campers = [camper1,camper2,camper3,camper4]
     }
     
 

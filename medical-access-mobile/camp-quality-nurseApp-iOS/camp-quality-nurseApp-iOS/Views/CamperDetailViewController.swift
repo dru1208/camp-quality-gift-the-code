@@ -23,6 +23,8 @@ class CamperDetailViewController: UIViewController {
     var showMedication = false
     var popupHeight: CGFloat?
     
+    var treatments: [Treatment]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +36,8 @@ class CamperDetailViewController: UIViewController {
         camperimageView.clipsToBounds = true
         camperimageView.contentMode = .scaleToFill
         popupHeight = camperInfoContainer.frame.height
+        
+        
 
     }
     
@@ -47,6 +51,12 @@ class CamperDetailViewController: UIViewController {
             showMedicationContainerConstraint.constant -= popupHeight!
             showMedicationButton.setTitle("Hide Schedule", for: .normal)
         }
+    }
+    
+    func fakeData() {
+        let treatment1 = Treatment(name: "Acetaminophen", time: "09:00", details: "Reduce by 25 mg if sick", notes: "", isCompleted: false)
+        
+        self.treatments = [treatment1]
     }
     
 }
