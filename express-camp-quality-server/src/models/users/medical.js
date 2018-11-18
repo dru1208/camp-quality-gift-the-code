@@ -7,4 +7,4 @@ const medical = (sequelize, DataTypes) => {
   return Medical
 }
 
-export default medical
+module.exports = medical

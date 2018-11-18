@@ -4,7 +4,7 @@ const parent = (sequelize, DataTypes) => {
   const Parent = sequelize.define('parent', {
     firstName: {
       type: DataTypes.STRING,
-    }
+    },
     email: {
       type: DataTypes.STRING,
       unique: true
@@ -26,4 +26,4 @@ const parent = (sequelize, DataTypes) => {
   return Parent
 }
 
-export default parent
+module.exports = parent

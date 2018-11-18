@@ -8,4 +8,4 @@ const campSession = (sequelize, DataTypes) => {
   return CampSession
 }
 
-export default campSession
+module.exports = campSession

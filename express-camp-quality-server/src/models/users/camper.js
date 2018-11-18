@@ -3,3 +3,5 @@ const camper = (sequelize, DataTypes) => {
 
   })
 }
+
+module.exports = camper
