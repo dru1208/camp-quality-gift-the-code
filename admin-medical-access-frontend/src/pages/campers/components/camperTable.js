@@ -15,7 +15,6 @@ const CamperTable = props => {
           <th>Camper ID</th>
           <th>Most Recent Medicine Administered</th>
           <th>Condition</th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
