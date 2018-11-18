@@ -6,7 +6,7 @@ export default class FormInfo extends Component {
     this.state = {
       firstName: "",
       lastName: "",
-      preferredName: "",
+      nickname: "",
       preferredPronoun: "",
       afterSchoolAndWeekendActivity: "",
       faveMovieMusicFood: "",
@@ -64,7 +64,7 @@ export default class FormInfo extends Component {
 
             <div className="form-info--container">
               <label htmlFor="nickname">...but my friends call me</label>
-              <input type="text" placeholder="Nickname" name="nickname" onChange={this.handleChange("preferredName")} />
+            <input type="text" placeholder="Nickname" name="nickname" onChange={this.handleChange("nickname")} />
             </div>
 
             <div className="form-info--container">
@@ -288,7 +288,7 @@ export default class FormInfo extends Component {
               <label htmlFor="travelArrangements">
                 How would you reach the camp grounds?
               </label>
-  preferredName: "",")}/>
+            <input type="textarea" required onChange={this.handleChange("travelArrangements")}/>
             </div>
 
             <input type="submit" value="Submit" />
