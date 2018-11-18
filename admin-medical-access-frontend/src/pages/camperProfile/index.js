@@ -37,7 +37,7 @@ class CamperProfile extends Component {
         details: 'must reduce to 25 mg when sick',
         dosage: '50 mg',
         medication: 'Advil',
-        time: '11:00'
+        time: '11:00am'
       }
     }
     this.setState({
