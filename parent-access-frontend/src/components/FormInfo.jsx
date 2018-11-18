@@ -3,280 +3,296 @@ import React, { Component } from 'react';
 export default class FormInfo extends Component {
   constructor(props){
     super(props)
-    this.state = { firstName: "", lastName: "", nickname: "", preferredPronoun: "", afterSchoolAndWeekendActivity: "", faveMovieMusicFood: "", ifICould: "", needToKnow: "", lookingForwardTo: "", bestCampEverIf: "", shirtSize: "small", cqAmbassador: "yes", camperStatus: "new_patient", stayingPositive: "almost", tryingNewThings: "almost", interactingWithPeers: "almost", makingCloseFriendships: "almost", developingHobbiesInterest: "almost", overcomingObstacles: "almost", selfCare: "almost", oneToOneSupport: "no", IEP: "no" };
+    this.state = {
+      firstName: "",
+      lastName: "",
+      nickname: "",
+      preferredPronoun: "",
+      afterSchoolAndWeekendActivity: "",
+      faveMovieMusicFood: "",
+      ifICould: "",
+      needToKnow: "",
+      lookingForwardTo: "",
+      bestCampEverIf: "",
+      shirtSize: "extra-small",
+      cqAmbassador: true,
+      camperStatus: "returning_sibling",
+      familyDoctor: "",
+      oncologistSpecialist: "",
+      hospital: "",
+      stayingPositive: "every",
+      tryingNewThings: "every",
+      interactingWithPeers: "every",
+      makingCloseFriendships: "every",
+      developingHobbiesInterest: "every",
+      overcomingObstacles: "every",
+      selfCare: "every",
+      oneToOneSupport: true,
+      IEP: true,
+      travelArrangements: "" };
+  }
+
+  handleChange = prop => event => {
+    this.setState({
+      [prop]: event.target.value
+    })
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+    this.props.updateInfo(this.state)
   }
 
   render(){
-    const { camperStatus, stayingPositive, tryingNewThings, interactingWithPeers, makingCloseFriendships, developingHobbiesInterest, overcomingObstacles, selfCare, oneToOneSupport, IEP } = this.state;
-    return <div className="form-info">
-    <form>
-        <div className="all-about-me">
-          <h2>All About Me!</h2>
-          <p>
-            This information will help us match your camper to a companion
-            or camper group.
-          </p>
-          <p>Tell us a bit about yourself!</p>
+    return <div className="form-info forms">
+        <form onSubmit={this.handleSubmit}>
+            <div className="all-about-me">
+              <h2>All About Me!</h2>
+              <p>
+                This information will help us match your camper to a companion
+                or camper group.
+              </p>
+              <p>Tell us a bit about yourself!</p><br/>
 
-          <div className="form-info--container">
-            <fieldset>
-              <legend>My first and last names are:</legend>
-              <input type="text" placeholder="First Name" name="first_name" required />
-              <input type="text" placeholder="Last Name" name="last_name" required />
-            </fieldset>
-          </div>
+              <div className="form-info--container">
+                
+                  <label>My first and last names are:</label><br/>
+                  <input type="text" placeholder="First Name" name="first_name" onChange={this.handleChange("firstName")} required />
+                  <input type="text" placeholder="Last Name" name="last_name" onChange={this.handleChange("lastName")} required />
+                
+              </div>
 
-          <div className="form-info--container">
-            <label htmlFor="nickname">...but my friends call me</label>
-            <input type="text" placeholder="Nickname" name="nickname" />
-          </div>
+              <div className="form-info--container">
+                <label htmlFor="nickname">...but my friends call me</label><br/>
+                <input type="text" placeholder="Nickname" name="nickname" onChange={this.handleChange("preferredName")} />
+              </div>
 
-          <div className="form-info--container">
-            <label htmlFor="preferred-pronoun">
-              I actually prefer people to use __(pronoun)__ when they are
-              referring to me.
-            </label>
-            <input type="text" name="preferred-pronoun" placeholder="e.g. He/Him, She/Her, They/Them" />
-          </div>
+              <div className="form-info--container">
+                <label htmlFor="preferred-pronoun">
+                  I actually prefer people to use __(pronoun)__ when they are
+                  referring to me.
+                </label><br/>
+                <input type="text" name="preferred-pronoun" placeholder="e.g. He/Him, She/Her, They/Them" onChange={this.handleChange("preferredPronoun")} />
+              </div>
 
-          <div className="form-info--container">
-            <label htmlFor="birthday">I celebrate my birthdays on</label>
-            <input name="birthday" type="date" value="2018-11-17" required />
-          </div>
+              <div className="form-info--container">
+                <label htmlFor="birthday">I celebrate my birthdays on</label><br/>
+                <input name="birthday" type="date" onChange={this.handleChange("birthday")} required />
+              </div>
 
-          <div className="form-info--container">
-            <label htmlFor="after_school_and_weekend_activity">
-              After school and on the weekends I like to
-            </label>
-            <textarea rows="5" cols="33" placeholder="e.g. reading, drawing, skateboarding" name="after_school_and_weekend_activity" />
-          </div>
+              <div className="form-info--container">
+                <label htmlFor="after_school_and_weekend_activity">
+                  After school and on the weekends I like to
+                </label><br/>
+                <textarea rows="5" cols="50" placeholder="e.g. reading, drawing, skateboarding" name="after_school_and_weekend_activity" onChange={this.handleChange("afterSchoolAndWeekendActivity")} />
+              </div>
 
-          <div className="form-info--container">
-            <label htmlFor="fave_movie_music_food">
-              My favourite movie of all time, the kind of music I like
-              listening to, and the most delicious food EVER are:
-            </label>
-            <textarea rows="5" cols="33" name="fave_movie_music_food" />
-          </div>
+              <div className="form-info--container">
+                <label htmlFor="fave_movie_music_food">
+                  My favourite movie of all time, the kind of music I like
+                  listening to, and the most delicious food EVER are:
+                </label><br/>
+                <textarea rows="5" cols="50" name="fave_movie_music_food" onChange={this.handleChange("faveMovieMusicFood")} />
+              </div>
 
-          <div className="form-info--container">
-            <label htmlFor="if_i_could">
-              If I could do anything in the world I would like to:
-            </label>
-            <textarea rows="5" cols="33" name="if_i_could" />
-          </div>
+              <div className="form-info--container">
+                <label htmlFor="if_i_could">
+                  If I could do anything in the world I would like to:
+                </label><br/>
+                <textarea rows="5" cols="50" name="if_i_could" onChange={this.handleChange("ifICould")} />
+              </div>
 
-          <div className="form-info--container">
-            <label htmlFor="need_to_know">
-              The most important thing you need to know about me is:
-            </label>
-            <textarea rows="5" cols="33" name="need_to_know" />
-          </div>
+              <div className="form-info--container">
+                <label htmlFor="need_to_know">
+                  The most important thing you need to know about me is:
+                </label><br/>
+                <textarea rows="5" cols="50" name="need_to_know" onChange={this.handleChange("needToKnow")} />
+              </div>
 
-          <div className="form-info--container">
-            <label htmlFor="looking_forward_to">
-              What I'm looking forward to the most at Camp is:
-            </label>
-            <textarea rows="5" cols="33" name="looking_forward_to" />
-          </div>
+              <div className="form-info--container">
+                <label htmlFor="looking_forward_to">
+                  What I'm looking forward to the most at Camp is:
+                </label><br/>
+                <textarea rows="5" cols="50" name="looking_forward_to" onChange={this.handleChange("lookingForwardTo")} />
+              </div>
 
-          <div className="form-info--container">
-            <label htmlFor="best_camp_ever_if">
-              This would be the best camp ever if we could:
-            </label>
-            <textarea rows="5" cols="33" name="best_camp_ever_if" />
-          </div>
+              <div className="form-info--container">
+                <label htmlFor="best_camp_ever_if">
+                  This would be the best camp ever if we could:
+                </label><br/>
+                <textarea rows="5" cols="50" name="best_camp_ever_if" onChange={this.handleChange("bestCampEverIf")} />
+              </div>
 
-          <div className="form-info--container">
-            <fieldset>
-              <legend>
-                You'll be getting a cool T-Shirt at camp! What' size would
-                you like?
-              </legend>
-              <input type="radio" id="extra-small" name="shirt_size" />
-              <label htmlFor="extra-small">Extra Small</label>
+              <div className="form-info--container">
+                <label htmlFor="shirt_size">
+                  You'll be getting a cool T-shirt at the camp! What size would you like?
+                  <select onChange={this.handleChange("shirtSize")}>
+                    <option value="extra-small">Extra Small</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                  </select>
+                </label><br/>
+              </div>
+
+              <div className="form-info--container">
+                <label>
+                  Would you like to know more about becoming a CQ Ambassador?
+                  <select onChange={this.handleChange("cqAmbassador")}>
+                    <option value={true}>Yes</option>
+                    <option value={false}>No</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <div className="more-info">
+              <h2>More about you!</h2>
+
+              <label>
+                Camper's Status
+                <select onChange={this.handleChange("camperStatus")}>
+                  <option value="returning_sibling">
+                    Returning Sibling Camper
+                  </option>
+                  <option value="returning_patient">
+                    Returning Patient Camper
+                  </option>
+                  <option value="new_sibling">New Sibling Camper</option>
+                  <option value="new_camper">New Patient Camper</option>
+                </select>
+              </label>
+
+              <div className="form-info--container">
+                <label htmlFor="family_doctor">Family Doctor:</label>
+                <input type="text" name="family_doctor" onChange={this.handleChange("familyDoctor")} required />
+              </div>
+
+              <div className="form-info--container">
+                <label htmlFor="oncologist_specialist">
+                  Oncologist/Specialist:
+                </label>
+                <input type="text" name="oncologist_specialist" onChange={this.handleChange("oncologistSpecialist")} required />
+              </div>
+
+              <div className="form-info--container">
+                <label htmlFor="hospital">Hospital:</label>
+                <input type="text" name="hospital" onChange={this.handleChange("hospital")} required />
+              </div>
+
               <br />
 
-              <input type="radio" id="small" name="shirt_size" />
-              <label htmlFor="small">Small</label>
+              <label>
+                Does your child need one-to-one support to take care of their needs?
+                <select onChange={this.handleChange("oneToOneSupport")}>
+                  <option value={true}>Yes</option>
+                  <option value={false}>No</option>
+                </select>
+              </label>
+
               <br />
 
-              <input type="radio" id="medium" name="shirt_size" />
-              <label htmlFor="medium">Medium</label>
-              <br />
+              <label>
+                Does your child have an IEP (Individual Education Plan)?
+                <select onChange={this.handleChange("IEP")}>
+                  <option value={true}>Yes</option>
+                  <option value={false}>No</option>
+                </select>
+              </label>
 
-              <input type="radio" id="large" name="shirt_size" />
-              <label htmlFor="large">Large</label>
-              <br />
+              <div>
+                <label htmlFor="travelArrangements">
+                  How would you reach the camp grounds?
+                </label>
+                <input type="textarea" required />
+              </div>
+            <br />
 
-              <input type="radio" id="extra-large" name="shirt_size" />
-              <label htmlFor="extra-large">Extra Large</label>
-              <br />
-            </fieldset>
-          </div>
+            <p>
+              How would you rate your teenager's skills in the following
+              areas?
+            </p>
 
-          <div className="form-info--container">
-            <fieldset>
-              <legend>
-                Would you like to know more about becoming a CQ ambassador?
-              </legend>
+            <label>
+              Staying positive
+              <select onChange={this.handleChange("stayingPositive")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
 
-              <input type="radio" id="yes" name="cq_ambassador" />
-              <label htmlFor="yes">Yes</label>
-              <br />
+            <br />
 
-              <input type="radio" id="no" name="cq_ambassador" />
-              <label htmlFor="no">No</label>
-              <br />
-            </fieldset>
-          </div>
-        </div>
+            <label>
+              Trying new things
+              <select onChange={this.handleChange("tryingNewThings")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
 
-        <div className="more-info">
-        <h2>More about you!</h2>
+            <br />
 
-        <label>
-          Camper's Status
-          <select value={camperStatus}>
-            <option value="returning_sibling">
-              Returning Sibling Camper
-            </option>
-            <option value="returning_patient">
-              Returning Patient Camper
-            </option>
-            <option value="new_sibling">
-              New Sibling Camper
-            </option>
-            <option value="new_camper">
-              New Patient Camper
-            </option>
-          </select>
-        </label>
+            <label>
+              Interacting with peers in a group
+              <select onChange={this.handleChange("interactingWithPeers")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
 
-        <div className="form-info--container">
-          <label htmlFor="family_doctor">Family Doctor:</label>
-          <input type="text" name="family_doctor" required/>
-        </div>
+            <br />
 
-        <div className="form-info--container">
-          <label htmlFor="oncologist_specialist">Oncologist/Specialist:</label>
-          <input type="text" name="oncologist_specialist" required />
-        </div>
+            <label>
+              Making close friendships
+              <select onChange={this.handleChange("makingCloseFriendships")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
 
-        <div className="form-info--container">
-          <label htmlFor="hospital">Hospital:</label>
-          <input type="text" name="hospital" required />
-        </div>
+            <br />
 
-        <br />
-        <br />
+            <label>
+              Developing hobbies and interest
+              <select onChange={this.handleChange("developingHobbiesInterest")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
 
-        <p>
-          How would you rate your teenager's skills in the following
-          areas?
-        </p>
+            <br />
 
-        <label>
-          Staying positive
-          <select value={stayingPositive}>
-            <option value="every">Every time</option>
-            <option value="almost">Almost every time</option>
-            <option value="occasionally">Occasionally</option>
-          </select>
-        </label>
+            <label>
+              Overcoming obstacles
+              <select onChange={this.handleChange("overcomingObstacles")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
 
-        <br />
+            <br />
 
-        <label>
-          Trying new things
-          <select value={tryingNewThings}>
-            <option value="every">Every time</option>
-            <option value="almost">Almost every time</option>
-            <option value="occasionally">Occasionally</option>
-          </select>
-        </label>
+            <label>
+              Taking care of themselvers
+              <select onChange={this.handleChange("selfCare")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
 
-        <br />
+            <br />
 
-        <label>
-          Interacting with peers in a group
-          <select value={interactingWithPeers}>
-            <option value="every">Every time</option>
-            <option value="almost">Almost every time</option>
-            <option value="occasionally">Occasionally</option>
-          </select>
-        </label>
 
-        <br />
-
-        <label>
-          Making close friendships
-          <select value={makingCloseFriendships}>
-            <option value="every">Every time</option>
-            <option value="almost">Almost every time</option>
-            <option value="occasionally">Occasionally</option>
-          </select>
-        </label>
-
-        <br />
-
-        <label>
-          Developing hobbies and interest
-          <select value={developingHobbiesInterest}>
-            <option value="every">Every time</option>
-            <option value="almost">Almost every time</option>
-            <option value="occasionally">Occasionally</option>
-          </select>
-        </label>
-
-        <br />
-
-        <label>
-          Overcoming obstacles
-          <select value={overcomingObstacles}>
-            <option value="every">Every time</option>
-            <option value="almost">Almost every time</option>
-            <option value="occasionally">Occasionally</option>
-          </select>
-        </label>
-
-        <br />
-
-        <label>
-          Taking care of themselvers
-          <select value={selfCare}>
-            <option value="every">Every time</option>
-            <option value="almost">Almost every time</option>
-            <option value="occasionally">Occasionally</option>
-          </select>
-        </label>
-
-        <br />
-
-        <label>
-          Does your child need one-to-one support to take care of their needs?
-          <select value={oneToOneSupport}>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-
-        <br />
-
-        <label>
-          Does your child have an IEP (Individual Education Plan)?
-          <select value={IEP}>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-
-        <div>
-          <label htmlFor="travelArrangements">How would you reach the camp grounds?</label>
-          <input value="textarea" required/>
-        </div>
-      </div>
-      </form>
-    </div>;
+            </div>
+        </form>
+      </div>;
   }
 }

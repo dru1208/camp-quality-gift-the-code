@@ -1,0 +1,11 @@
+.camper-profile{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.camper-profile--basic, .camper-profile--emergency, .camper-profile--treatment{
+  border: 1pt solid black;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}

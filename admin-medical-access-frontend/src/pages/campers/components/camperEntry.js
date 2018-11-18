@@ -16,7 +16,7 @@ const CamperEntry = ({ camper }) => {
       <td>{ camper.id }</td>
       <td>{ camper.medAdministered ? "True" : "False"}</td>
       <td>{ camper.disease }</td>
-      <td><button onClick={ _viewCamperProfile } >View Profile</button></td>
+      <td><button className="camperEntry-btn" onClick={ _viewCamperProfile } >View Profile</button></td>
     </tr>
   )
 }

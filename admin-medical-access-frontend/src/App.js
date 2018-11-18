@@ -44,7 +44,7 @@ class App extends Component {
   }
 
   _handleLogin = e => {
-    e.preventDefault()
+    e.preventDefault();
     const loginInfo = {
       email: e.target.email.value,
       password: e.target.password.value
@@ -53,7 +53,7 @@ class App extends Component {
       method: "POST",
       headers: {'content-type': 'application/json'},
       data: loginInfo,
-      url: ''
+      url: 'http://localhost:3002/login/'
     }
     axios(options)
       .then(response => {
@@ -66,7 +66,6 @@ class App extends Component {
           })
         }
       })
-
   }
 
   _handleSessionSelection = e => {

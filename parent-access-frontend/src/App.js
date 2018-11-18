@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import history from './history.jsx';
+import './App.css';
 import {
   withRouter,
   Router,
@@ -25,8 +26,6 @@ class App extends Component {
     return <Router history={history}>
         <Switch>
           <Route exact path="/" render={() => <Welcome />} />
-          <Route exact path="/signup" render={() => <Signup />}/>
-          <Route exact path="/login" render={() => <Login />}/>
           <Route exact path="/home" render={() => {
             return (
               <Fragment>

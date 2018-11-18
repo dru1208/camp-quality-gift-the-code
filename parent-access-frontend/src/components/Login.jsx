@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div>
-      <div>Login form</div>
       <div className="login-form">
         <div className="input-container">
           <label htmlFor="user_email">Email:</label>
@@ -17,9 +16,7 @@ const Login = () => {
         </div>
 
         <Link to="/home">
-          <a>
-            <div className="login-button">Login</div>
-          </a>
+          <div className="login-button">Login</div>
         </Link>
       </div>
 

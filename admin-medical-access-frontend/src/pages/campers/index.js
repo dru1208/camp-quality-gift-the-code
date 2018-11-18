@@ -47,11 +47,11 @@ class Campers extends Component {
 
   render() {
     return (
-      <div>
-        <div>List of Campers</div>
+      <div className="camperListPage" >
+        <div className="camperListHeader"> List of Campers </div>
         <SearchBar handleSearchResults={this._handleSearchResults} />
-        <button onClick={this._handleClearDisplayResults}>List All</button>
-        <button onClick={this._toggleMedNotAdministered}>Medication Required</button>
+        <button className="camperList-btn" onClick={this._handleClearDisplayResults}>List All</button>
+        <button className="camperList-btn" onClick={this._toggleMedNotAdministered}>Medication Required</button>
         <CamperTable searchResults={this.state.searchResults} campers={this.state.displayResults} />
       </div>
     )
