@@ -16,7 +16,8 @@ export default class FormHealth extends Component {
   }
   render(){
     const { heightUnit, weightUnit, epinephrine, hasDietaryRestriction } = this.state;
-    return <div>
+    return (
+      <div className="healthForm">
         <h2>Form Health</h2>
         <form>
           <div>
@@ -72,7 +73,54 @@ export default class FormHealth extends Component {
               <textarea rows="5" cols="150"/>
             </div>
           </div>
+
+
+  // if true, go on to fill out info about medications and treatment (frequency, schedule, details)
+          <div>
+            <label htmlFor="medication">Medication</label>
+            <select name="medication">
+              <option value={true}>Yes</option>
+              <option value={false}>No</option>
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor="treatment">Treatment</label>
+            <select name="treatment">
+              <option value={true}>Yes</option>
+              <option value={false}>No</option>
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor="irregularMeds">Irregular Medicine</label>
+            <input type="text" name="irregularMeds" />
+            <label htmlFor="whyMedsNecessary">If so, why is this medicine necessary</label>
+            <input type="textarea" name="whyMedsNecessary" />
+          </div>
+
+          <div>
+            <label htmlFor="noOTC">Prohibited Over the Counter Meds</label>
+            <input type="text" name="noOTC" />
+          </div>
+
+          <div className="diagnosis">
+            <div>
+              <label htmlFor="primaryDiagnosis">Primary Diagnosis</label>
+              <input type="text" name="primaryDiagnosis" />
+            </div>
+
+            <div>
+              <label htmlFor="secondaryDiagnosis">Secondary Diagnosis</label>
+              <input type="text" name="secondaryDiagnosis" />
+            </div>
+          </div>
+
+
+
+
+
         </form>
-      </div>;
+      </div>);
   }
 }
