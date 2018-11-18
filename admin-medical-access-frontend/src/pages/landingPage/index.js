@@ -18,15 +18,3 @@ const Home = props => (
 )
 
 export default Home
-
-
-
-
-
-    // <div className="logoImgContainer">
-    //   <img className="logoImg" src={Logo} />
-    // </div>
-
-    // <div className="loginFormContainer">
-    //   <div className="loginHeader">WELCOME TO THE MEDICAL ADMINISTRATION PORTAL</div>
-    // </div>
