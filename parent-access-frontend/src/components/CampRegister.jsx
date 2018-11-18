@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
 import FormInfo from './FormInfo';
+import FormHealth from './FormHealth';
+import FormDocs from './FormDocs';
 
 
 export default class CampRegister extends Component {
   constructor(props){
     super(props)
     this.state = {
-      currentForm: "info",
+      currentForm: "health",
       info: {},
       health: {},
       docs: {}
     }
+  }
+
+  changeViews = (view) => {
+    this.setState({
+      currentForm: view
+    })
   }
 
   updateInfo = () => {
@@ -26,8 +34,10 @@ export default class CampRegister extends Component {
         formDisplay = <FormInfo />
         break
       case "health":
+        formDisplay = <FormHealth />
         break
       case "docs":
+        formDisplay = <FormDocs />
         break
       default:
         break
@@ -35,7 +45,7 @@ export default class CampRegister extends Component {
 
     return(
       <div>
-        <NavBar />
+        <NavBar changeViews={this.changeViews}/>
         { formDisplay }
       </div>
     )

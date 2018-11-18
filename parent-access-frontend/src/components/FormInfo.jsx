@@ -39,6 +39,11 @@ export default class FormInfo extends Component {
           </div>
 
           <div className="form-info--container">
+            <label htmlFor="birthday">I celebrate my birthdays on</label>
+            <input name="birthday" type="date" value="2018-11-17" required />
+          </div>
+
+          <div className="form-info--container">
             <label htmlFor="after_school_and_weekend_activity">
               After school and on the weekends I like to
             </label>
@@ -88,23 +93,23 @@ export default class FormInfo extends Component {
                 you like?
               </legend>
               <input type="radio" id="extra-small" name="shirt_size" />
-              <label for="extra-small">Extra Small</label>
+              <label htmlFor="extra-small">Extra Small</label>
               <br />
 
               <input type="radio" id="small" name="shirt_size" />
-              <label for="small">Small</label>
+              <label htmlFor="small">Small</label>
               <br />
 
               <input type="radio" id="medium" name="shirt_size" />
-              <label for="medium">Medium</label>
+              <label htmlFor="medium">Medium</label>
               <br />
 
               <input type="radio" id="large" name="shirt_size" />
-              <label for="large">Large</label>
+              <label htmlFor="large">Large</label>
               <br />
 
               <input type="radio" id="extra-large" name="shirt_size" />
-              <label for="extra-large">Extra Large</label>
+              <label htmlFor="extra-large">Extra Large</label>
               <br />
             </fieldset>
           </div>
@@ -116,11 +121,11 @@ export default class FormInfo extends Component {
               </legend>
 
               <input type="radio" id="yes" name="cq_ambassador" />
-              <label for="yes">Yes</label>
+              <label htmlFor="yes">Yes</label>
               <br />
 
               <input type="radio" id="no" name="cq_ambassador" />
-              <label for="no">No</label>
+              <label htmlFor="no">No</label>
               <br />
             </fieldset>
           </div>

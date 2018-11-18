@@ -2,15 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 
-const NavBar = props => {
+const NavBar = ({changeViews}) => {
+
+  const changeForm = e => {
+    changeViews(e.target.id)
+  }
+
   return <div className="navbar">
-      <li>
+      <li onClick={changeForm} id="info">
         Camper Info
       </li>
-      <li>
+      <li onClick={changeForm} id="health">
         Health Forms
       </li>
-      <li>
+      <li onClick={changeForm} id="docs">
         Document Forms
       </li>
       <li>
