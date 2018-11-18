@@ -5,9 +5,7 @@ const Welcome = () => {
   return (
     <div className="welcomePage">
       <h1>Welcome!</h1>
-      <Link to="/signup">
-        <a>Sign Up</a>
-      </Link>
+      <Link to="/signup">Sign Up</Link>
       {" "}
       <br />
       <Link to="/login">Log In</Link>

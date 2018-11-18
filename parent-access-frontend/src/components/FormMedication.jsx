@@ -1,34 +1,50 @@
 import React, { Component, Fragment } from 'react';
 
-const MedicationRow = ({name, dose, schedule, details}) => {
+const MedicationRows = ({medications}) => {
   return (
-    <tr>
-      <td>
-        <input type="text" name="name" value={name}/>
-      </td>
-      <td>
-        <input type="text" name="dose" value={dose}/>
-      </td>
-      <td>
-        <input type="text" name="schedule" value={schedule}/>
-      </td>
-      <td>
-        <input type="text" name="details" value={details}/>
-      </td>
-    </tr>
+    medications.map((elem, ind) => {
+      return <tr key={ind}>
+          <td>
+          <input data-id={ind} className="medName" type="text" name="medication_name" value={medications[ind].medName} />
+          </td>
+          <td>
+            <input data-id={ind} className="dose" type="text" name="dose" value={medications[ind].dose} />
+          </td>
+          <td>
+            <input data-id={ind} className="schedule" type="text" name="schedule" value={medications[ind].schedule} />
+          </td>
+          <td>
+            <input data-id={ind} className="details" type="text" name="details" value={medications[ind].details} />
+          </td>
+        </tr>;
+    })
+
   )
 }
 
 export default class FormMedication extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
       medications: [{
-        name: "",
+        medName: "",
         dose: "",
         schedule: "",
         details: ""
       }]
+    }
+  }
+
+  saveMedications = e => {
+    e.preventDefault()
+    this.props.saveAllMedications(this.state.medications);
+  }
+
+  handleChange = e => {
+    if(["medName", "dose", "schedule", "details"].includes(e.target.className)){
+      let medications = [...this.state.medications]
+      medications[e.target.dataset.id][e.target.className] = e.target.value
+      this.setState({ medications })
     }
   }
 
@@ -47,15 +63,9 @@ export default class FormMedication extends Component {
 
   render(){
     const { medications } = this.state;
-    const medicationRows = medications.map((elem, index) => {
-      return <MedicationRow name={medications[index].name}
-        dose={medications[index].dose}
-        schedule={medications[index].schedule}
-        details={medications[index].details}
-        />
-    })
+    const medicationRows = <MedicationRows medications={medications} />
     return <Fragment>
-      <table>
+      <table onChange={this.handleChange}>
         <thead>
           <tr>
             <th>Medication Name</th>
@@ -69,6 +79,7 @@ export default class FormMedication extends Component {
         </tbody>
       </table>
       <button onClick={ this.addMedication }>Add More Medication</button>
+      <button onClick={ this.saveMedications }>Save Medications</button>
     </Fragment>
   };
 }
