@@ -5,13 +5,13 @@ export default const FormImmunization = props => {
 
   return (
     <div className="immunizationForm">
-
       <div>
         <label htmlFor="chickenPox"></label>
         <select name="chickenPox">
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select>
+        <input type="date" name="chickenPoxDate" />
       </div>
 
       <div>
@@ -20,6 +20,7 @@ export default const FormImmunization = props => {
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select>
+        <input type="date" name="dipPertTetPolDate" />
       </div>
 
       <div>
@@ -28,6 +29,7 @@ export default const FormImmunization = props => {
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select>
+        <input type="date" name="hepBDate" />
       </div>
 
       <div>
@@ -36,6 +38,7 @@ export default const FormImmunization = props => {
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select>
+        <input type="date" name="ipvOpvDate" />
       </div>
 
 
@@ -45,6 +48,7 @@ export default const FormImmunization = props => {
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select>
+        <input type="date" name="mmrDate" />
       </div>
 
       <div>
@@ -53,6 +57,7 @@ export default const FormImmunization = props => {
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select>
+        <input type="date" name="mcv4Date" />
       </div>
 
 
@@ -60,6 +65,8 @@ export default const FormImmunization = props => {
         <label htmlFor="notImmunized">Not Immunized Explanation</label>
         <input type="textarea" name="notImmunized" />
       </div>
+
+      <input type="submit" value="Submit" />
 
     </div>
   )
