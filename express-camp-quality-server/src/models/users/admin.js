@@ -1,17 +1,12 @@
 const bcrypt = require("bcryptjs")
 
-const parent = (sequelize, DataTypes) => {
-  const Parent = sequelize.define('parent', {
-    firstName: {
-      type: DataTypes.STRING,
-    }
-    email: {
+const admin = (sequelize, DataTypes) => {
+  const Admin = sequelize.define('admin', {
+    username: {
       type: DataTypes.STRING,
       unique: true
     },
     password: DataTypes.STRING,
-    phoneNumber: DataTypes.STRING,
-    gender: DataTypes.STRING,
   }, {
     freezeTableName: true,
     instanceMethods: {
@@ -23,7 +18,7 @@ const parent = (sequelize, DataTypes) => {
       }
     }
   })
-  return Parent
+  return Admin
 }
 
-export default parent
+export default admin

@@ -5,13 +5,13 @@ const sequelize = new Sequelize('campQuality', 'campQualityRootAdmin', 'campQual
 })
 
 const models = {
-// fill this out
-}
-
-// const models = {
-//   Author: sequelize.import('./author'),
-//   Tweet: sequelize.import('./tweet'),
-// };
+  CampSession: sequelize.import('./camp/campSession'),
+  CamperSession: sequelize.import('./camp/camperSession'),
+  Admin: sequelize.import('./users/admin'),
+  Parent: sequelize.import('./users/parent'),
+  Medical: sequelize.import('./users/medical'),
+  Camper: sequelize.import('./users/camper'),
+};
 
 Object.keys(models).forEach(key => {
   if ('associate' in models[key]) {
