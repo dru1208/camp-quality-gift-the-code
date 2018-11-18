@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FEAE6B3B51EC6C7A89F8291 /* Pods_camp_quality_nurseApp_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05202FDD32AC6A272F125002 /* Pods_camp_quality_nurseApp_iOSTests.framework */; };
+		1461C5BDEB729235E83B7BDF /* Pods_camp_quality_nurseApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5ECC36F1587737DE2EC7186 /* Pods_camp_quality_nurseApp_iOS.framework */; };
+		46BDD3BB21A1887B00B542BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46BDD3BA21A1887B00B542BE /* GoogleService-Info.plist */; };
 		46BFA7D9219FF20400F6DB3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA7D8219FF20400F6DB3B /* AppDelegate.swift */; };
 		46BFA7DB219FF20400F6DB3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA7DA219FF20400F6DB3B /* ViewController.swift */; };
 		46BFA7DE219FF20400F6DB3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BFA7DC219FF20400F6DB3B /* Main.storyboard */; };
-		46BFA7E1219FF20400F6DB3B /* camp_quality_nurseApp_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA7DF219FF20400F6DB3B /* camp_quality_nurseApp_iOS.xcdatamodeld */; };
 		46BFA7E3219FF20500F6DB3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46BFA7E2219FF20500F6DB3B /* Assets.xcassets */; };
 		46BFA7E6219FF20500F6DB3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BFA7E4219FF20500F6DB3B /* LaunchScreen.storyboard */; };
 		46BFA7F1219FF20500F6DB3B /* camp_quality_nurseApp_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA7F0219FF20500F6DB3B /* camp_quality_nurseApp_iOSTests.swift */; };
+		46BFA7FC219FF8EE00F6DB3B /* Camper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA7FB219FF8EE00F6DB3B /* Camper.swift */; };
+		46BFA7FF219FFE5600F6DB3B /* CamperViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA7FE219FFE5600F6DB3B /* CamperViewCell.swift */; };
+		46BFA801219FFEE600F6DB3B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA800219FFEE600F6DB3B /* SearchViewController.swift */; };
+		46BFA80421A011D600F6DB3B /* CamperDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */; };
+		46BFA80621A0541900F6DB3B /* Treatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA80521A0541900F6DB3B /* Treatment.swift */; };
+		46BFA81021A13F1000F6DB3B /* TreatmentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA80F21A13F1000F6DB3B /* TreatmentViewCell.swift */; };
+		46BFA81221A1516F00F6DB3B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA81121A1516F00F6DB3B /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +36,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05202FDD32AC6A272F125002 /* Pods_camp_quality_nurseApp_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_camp_quality_nurseApp_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A5F618A8E895130E99DD978 /* Pods-camp-quality-nurseApp-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOSTests/Pods-camp-quality-nurseApp-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		46BDD3BA21A1887B00B542BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46BFA7D5219FF20400F6DB3B /* camp-quality-nurseApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "camp-quality-nurseApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BFA7D8219FF20400F6DB3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46BFA7DA219FF20400F6DB3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		46BFA7DD219FF20400F6DB3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		46BFA7E0219FF20400F6DB3B /* camp_quality_nurseApp_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = camp_quality_nurseApp_iOS.xcdatamodel; sourceTree = "<group>"; };
 		46BFA7E2219FF20500F6DB3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46BFA7E5219FF20500F6DB3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46BFA7E7219FF20500F6DB3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46BFA7EC219FF20500F6DB3B /* camp-quality-nurseApp-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "camp-quality-nurseApp-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BFA7F0219FF20500F6DB3B /* camp_quality_nurseApp_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camp_quality_nurseApp_iOSTests.swift; sourceTree = "<group>"; };
 		46BFA7F2219FF20500F6DB3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46BFA7FB219FF8EE00F6DB3B /* Camper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camper.swift; sourceTree = "<group>"; };
+		46BFA7FE219FFE5600F6DB3B /* CamperViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamperViewCell.swift; sourceTree = "<group>"; };
+		46BFA800219FFEE600F6DB3B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamperDetailViewController.swift; sourceTree = "<group>"; };
+		46BFA80521A0541900F6DB3B /* Treatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treatment.swift; sourceTree = "<group>"; };
+		46BFA80F21A13F1000F6DB3B /* TreatmentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentViewCell.swift; sourceTree = "<group>"; };
+		46BFA81121A1516F00F6DB3B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		4F85BB177959EE8DF70CA923 /* Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOSTests/Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8DFE297AD045AEC174C32533 /* Pods-camp-quality-nurseApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOS/Pods-camp-quality-nurseApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A0E42B3327261B390F929642 /* Pods-camp-quality-nurseApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOS/Pods-camp-quality-nurseApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A5ECC36F1587737DE2EC7186 /* Pods_camp_quality_nurseApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_camp_quality_nurseApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1461C5BDEB729235E83B7BDF /* Pods_camp_quality_nurseApp_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +75,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FEAE6B3B51EC6C7A89F8291 /* Pods_camp_quality_nurseApp_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E75A11ACB259317540C76DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0E42B3327261B390F929642 /* Pods-camp-quality-nurseApp-iOS.debug.xcconfig */,
+				8DFE297AD045AEC174C32533 /* Pods-camp-quality-nurseApp-iOS.release.xcconfig */,
+				4F85BB177959EE8DF70CA923 /* Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig */,
+				2A5F618A8E895130E99DD978 /* Pods-camp-quality-nurseApp-iOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		46BFA7CC219FF20400F6DB3B = {
 			isa = PBXGroup;
 			children = (
 				46BFA7D7219FF20400F6DB3B /* camp-quality-nurseApp-iOS */,
 				46BFA7EF219FF20500F6DB3B /* camp-quality-nurseApp-iOSTests */,
 				46BFA7D6219FF20400F6DB3B /* Products */,
+				0E75A11ACB259317540C76DE /* Pods */,
+				8AA59253AFB634F32904A977 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +116,15 @@
 		46BFA7D7219FF20400F6DB3B /* camp-quality-nurseApp-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				46BDD3BA21A1887B00B542BE /* GoogleService-Info.plist */,
 				46BFA7D8219FF20400F6DB3B /* AppDelegate.swift */,
 				46BFA7DA219FF20400F6DB3B /* ViewController.swift */,
 				46BFA7DC219FF20400F6DB3B /* Main.storyboard */,
+				46BFA7FD219FFB0F00F6DB3B /* Model */,
+				46BFA802219FFF0300F6DB3B /* Views */,
 				46BFA7E2219FF20500F6DB3B /* Assets.xcassets */,
 				46BFA7E4219FF20500F6DB3B /* LaunchScreen.storyboard */,
 				46BFA7E7219FF20500F6DB3B /* Info.plist */,
-				46BFA7DF219FF20400F6DB3B /* camp_quality_nurseApp_iOS.xcdatamodeld */,
 			);
 			path = "camp-quality-nurseApp-iOS";
 			sourceTree = "<group>";
@@ -99,6 +138,36 @@
 			path = "camp-quality-nurseApp-iOSTests";
 			sourceTree = "<group>";
 		};
+		46BFA7FD219FFB0F00F6DB3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46BFA7FB219FF8EE00F6DB3B /* Camper.swift */,
+				46BFA80521A0541900F6DB3B /* Treatment.swift */,
+				46BFA81121A1516F00F6DB3B /* FirebaseManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		46BFA802219FFF0300F6DB3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46BFA800219FFEE600F6DB3B /* SearchViewController.swift */,
+				46BFA7FE219FFE5600F6DB3B /* CamperViewCell.swift */,
+				46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */,
+				46BFA80F21A13F1000F6DB3B /* TreatmentViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8AA59253AFB634F32904A977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5ECC36F1587737DE2EC7186 /* Pods_camp_quality_nurseApp_iOS.framework */,
+				05202FDD32AC6A272F125002 /* Pods_camp_quality_nurseApp_iOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46BFA7F5219FF20500F6DB3B /* Build configuration list for PBXNativeTarget "camp-quality-nurseApp-iOS" */;
 			buildPhases = (
+				0E96D2E2CDCB5EDE1961348F /* [CP] Check Pods Manifest.lock */,
 				46BFA7D1219FF20400F6DB3B /* Sources */,
 				46BFA7D2219FF20400F6DB3B /* Frameworks */,
 				46BFA7D3219FF20400F6DB3B /* Resources */,
+				66A9719A59DF773B05BF45DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46BFA7F8219FF20500F6DB3B /* Build configuration list for PBXNativeTarget "camp-quality-nurseApp-iOSTests" */;
 			buildPhases = (
+				EF0E8BA20E6231893F3F6D75 /* [CP] Check Pods Manifest.lock */,
 				46BFA7E8219FF20500F6DB3B /* Sources */,
 				46BFA7E9219FF20500F6DB3B /* Frameworks */,
 				46BFA7EA219FF20500F6DB3B /* Resources */,
@@ -181,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46BFA7E6219FF20500F6DB3B /* LaunchScreen.storyboard in Resources */,
+				46BDD3BB21A1887B00B542BE /* GoogleService-Info.plist in Resources */,
 				46BFA7E3219FF20500F6DB3B /* Assets.xcassets in Resources */,
 				46BFA7DE219FF20400F6DB3B /* Main.storyboard in Resources */,
 			);
@@ -195,14 +268,93 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E96D2E2CDCB5EDE1961348F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-camp-quality-nurseApp-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66A9719A59DF773B05BF45DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-camp-quality-nurseApp-iOS/Pods-camp-quality-nurseApp-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-camp-quality-nurseApp-iOS/Pods-camp-quality-nurseApp-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF0E8BA20E6231893F3F6D75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-camp-quality-nurseApp-iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		46BFA7D1219FF20400F6DB3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46BFA7E1219FF20400F6DB3B /* camp_quality_nurseApp_iOS.xcdatamodeld in Sources */,
+				46BFA801219FFEE600F6DB3B /* SearchViewController.swift in Sources */,
+				46BFA81021A13F1000F6DB3B /* TreatmentViewCell.swift in Sources */,
+				46BFA7FF219FFE5600F6DB3B /* CamperViewCell.swift in Sources */,
+				46BFA81221A1516F00F6DB3B /* FirebaseManager.swift in Sources */,
+				46BFA80421A011D600F6DB3B /* CamperDetailViewController.swift in Sources */,
 				46BFA7DB219FF20400F6DB3B /* ViewController.swift in Sources */,
 				46BFA7D9219FF20400F6DB3B /* AppDelegate.swift in Sources */,
+				46BFA80621A0541900F6DB3B /* Treatment.swift in Sources */,
+				46BFA7FC219FF8EE00F6DB3B /* Camper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +514,7 @@
 		};
 		46BFA7F6219FF20500F6DB3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0E42B3327261B390F929642 /* Pods-camp-quality-nurseApp-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +533,7 @@
 		};
 		46BFA7F7219FF20500F6DB3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DFE297AD045AEC174C32533 /* Pods-camp-quality-nurseApp-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -398,6 +552,7 @@
 		};
 		46BFA7F9219FF20500F6DB3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F85BB177959EE8DF70CA923 /* Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -419,6 +574,7 @@
 		};
 		46BFA7FA219FF20500F6DB3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A5F618A8E895130E99DD978 /* Pods-camp-quality-nurseApp-iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,19 +625,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		46BFA7DF219FF20400F6DB3B /* camp_quality_nurseApp_iOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				46BFA7E0219FF20400F6DB3B /* camp_quality_nurseApp_iOS.xcdatamodel */,
-			);
-			currentVersion = 46BFA7E0219FF20400F6DB3B /* camp_quality_nurseApp_iOS.xcdatamodel */;
-			path = camp_quality_nurseApp_iOS.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 46BFA7CD219FF20400F6DB3B /* Project object */;
 }

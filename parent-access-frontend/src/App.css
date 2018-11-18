@@ -43,11 +43,11 @@
 .landingForms {
   justify-content: center;
   margin: auto 30em auto 30em ;
+  padding: 2em;
   color: #363636;
   background-color: white;
   box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
   opacity: 0.9;
-  display: grid;
   grid-template-rows: min-content min-content max-content;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
@@ -129,20 +129,8 @@ input[type="text"], input[type="textarea"], textarea, select, label {
 
 .loginRegister-btn {
   display: flex;
-  border: thin black solid;
-  grid-column: 2 / 3;
-}
-
-.loginRegisterForm {
-  grid-row: 2/-1;
-  grid-column: 2;
 }
 
 .formContent {
-  grid-row: 3 / 4;
   padding: 10px 0px;
-}
-
-.signupForm {
-  grid-column: 1 / span 3;
 }
