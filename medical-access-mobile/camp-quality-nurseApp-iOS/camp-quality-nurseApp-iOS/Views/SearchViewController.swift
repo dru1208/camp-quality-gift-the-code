@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SocketIO
+
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
@@ -15,21 +15,24 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var camperTableView: UITableView!
 
     var isFiltering = false
+
     var campers: [Camper]?
     var filteredCampers: [Camper]?
+    let database = FirebaseManager.shared
+   
+    
+
     
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        fakeData()
+        configureDatabase()
         self.filteredCampers = []
         searchBar.delegate = self
         
-//        let manager = SocketManager(socketURL: URL(string:"https://localhost:8080/")!)
-//        manager.connect()
-        
+        super.viewDidLoad()
+
         
     }
     
@@ -39,21 +42,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if isFiltering {
-            return (self.filteredCampers?.count)!
-        } else {
-            return (self.campers?.count)!
-        }
+        return 1
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "camperCell") as! CamperViewCell
         
-        if isFiltering {
-            cell.configureCell(camper: (filteredCampers?[indexPath.row])!)
-        } else {
-            cell.configureCell(camper: (campers?[indexPath.row])!)
-        }
+
         
         return cell
     }
@@ -67,27 +63,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText == "" {
-            isFiltering = false
-        } else {
-            isFiltering = true
-            filteredCampers = campers!.filter({( camper : Camper) -> Bool in
-                return camper.name.lowercased().contains(searchText.lowercased())
-            })
-        }
+
         
         camperTableView.reloadData()
 
     }
     
-    func fakeData() {
-        let camper1 = Camper(id: "1", name: "John Doe", allergies: ["peanut","advil"], cabin: "2B", image: UIImage(named: "c1")!)
-        let camper2 = Camper(id: "2", name: "Jane Doe", allergies: ["acetaminophen"], cabin: "5G", image: UIImage(named: "c3")!)
-        let camper3 = Camper(id: "3", name: "Johnny D", allergies: [""], cabin: "2B", image: UIImage(named: "c2")!)
-        let camper4 = Camper(id: "4", name: "Janey D", allergies: [""], cabin: "5G", image: UIImage(named: "c4")!)
+    func configureDatabase() {
         
-        self.campers = [camper1,camper2,camper3,camper4]
-    }
+        database.reference.child("camper").observe(.childAdded) { (DataSnapshot) in
+           print(DataSnapshot.value)
+        }
     
+ }
 
 }
+    
+

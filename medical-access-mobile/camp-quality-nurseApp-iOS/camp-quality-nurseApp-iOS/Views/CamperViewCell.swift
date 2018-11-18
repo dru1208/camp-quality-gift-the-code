@@ -28,7 +28,7 @@ class CamperViewCell: UITableViewCell {
     
     func configureCell(camper: Camper) {
         self.camper = camper
-        camperNameLabel.text = self.camper?.name
+        camperNameLabel.text = (self.camper?.firstName)! + " " + (self.camper?.lastName)!
         camperImage.image = self.camper?.image
         camperImage.layer.cornerRadius = 5
         camperImage.clipsToBounds = true

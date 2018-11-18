@@ -6,7 +6,8 @@ target 'camp-quality-nurseApp-iOS' do
   use_frameworks!
 
   # Pods for camp-quality-nurseApp-iOS
-   pod 'Socket.IO-Client-Swift', '~> 13.3.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
   target 'camp-quality-nurseApp-iOSTests' do
     inherit! :search_paths
     # Pods for testing

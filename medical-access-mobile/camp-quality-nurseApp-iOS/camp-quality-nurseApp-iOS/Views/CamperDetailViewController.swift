@@ -29,7 +29,7 @@ class CamperDetailViewController: UIViewController {
         super.viewDidLoad()
         
         camperimageView.image = camper?.image
-        camperNameLabel.text = camper?.name
+     //   camperNameLabel.text = camper?.name
         
         camperimageView.layer.masksToBounds = false
         camperimageView.layer.cornerRadius = camperimageView.frame.size.width / 2
@@ -54,9 +54,7 @@ class CamperDetailViewController: UIViewController {
     }
     
     func fakeData() {
-        let treatment1 = Treatment(name: "Acetaminophen", time: "09:00", details: "Reduce by 25 mg if sick", notes: "", isCompleted: false)
-        
-        self.treatments = [treatment1]
+
     }
     
 }
