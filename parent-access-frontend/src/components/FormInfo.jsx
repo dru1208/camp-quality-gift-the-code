@@ -9,6 +9,7 @@ export default class FormInfo extends Component {
   render(){
     const { camperStatus, stayingPositive, tryingNewThings, interactingWithPeers, makingCloseFriendships, developingHobbiesInterest, overcomingObstacles, selfCare, oneToOneSupport, IEP } = this.state;
     return <div className="form-info">
+    <form>
         <div className="all-about-me">
           <h2>All About Me!</h2>
           <p>
@@ -269,8 +270,13 @@ export default class FormInfo extends Component {
             <option value="no">No</option>
           </select>
         </label>
-      </div>
 
+        <div>
+          <label htmlFor="travelArrangements">How would you reach the camp grounds?</label>
+          <input value="textarea" required/>
+        </div>
+      </div>
+      </form>
     </div>;
   }
 }
