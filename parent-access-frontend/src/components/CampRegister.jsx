@@ -9,7 +9,7 @@ export default class CampRegister extends Component {
   constructor(props){
     super(props)
     this.state = {
-      currentForm: "health",
+      currentForm: "info",
       info: {},
       health: {},
       docs: {}

@@ -4,7 +4,7 @@
 import React from "react"
 
 
-export default const FormMedicalConditions = props => {
+const FormMedicalConditions = props => {
   return (
     <div>
 
@@ -43,3 +43,5 @@ export default const FormMedicalConditions = props => {
   )
 
 }
+
+export default FormMedicalConditions;

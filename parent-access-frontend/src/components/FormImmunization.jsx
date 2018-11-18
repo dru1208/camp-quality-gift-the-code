@@ -1,7 +1,7 @@
 import React from "react"
 
 
-export default const FormImmunization = props => {
+const FormImmunization = props => {
 
   return (
     <div className="immunizationForm">
@@ -65,9 +65,8 @@ export default const FormImmunization = props => {
         <label htmlFor="notImmunized">Not Immunized Explanation</label>
         <input type="textarea" name="notImmunized" />
       </div>
-
-      <input type="submit" value="Submit" />
-
     </div>
   )
 }
+
+export default FormImmunization;
