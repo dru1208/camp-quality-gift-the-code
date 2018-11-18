@@ -6,8 +6,8 @@ import SessionRadioMenu from "./components/sessionRadioMenu"
 const SessionSelection = props => {
 
   return (
-    <div>
-      <div>Select The Current Camp Session!</div>
+    <div className="sessionPage">
+      <div className="sessionHeader">Select The Current Camp Session</div>
       <SessionRadioMenu
         sessions={props.sessions}
         campLocation={props.campLocation}

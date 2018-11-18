@@ -1,14 +1,15 @@
 import React from "react"
 
 const LoginForm = props => (
-  <form>
-    <label for="username">Username:</label>
+  <form className="loginForm">
+    <label for="username">USERNAME</label>
     <input type="text" name="username" />
       <br />
-    <label for="password">Password:</label>
+    <label for="password">PASSWORD</label>
     <input type="password" name="password" />
       <br />
-    <input type="submit" value="Login"/>
+    <input className= "loginButton" type="submit" value="Login"/>
+    <a href="/session_select">click</a>
   </form>
 )
 
