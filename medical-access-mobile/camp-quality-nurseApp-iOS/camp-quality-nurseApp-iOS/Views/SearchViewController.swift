@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SocketIO
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
@@ -25,6 +26,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         fakeData()
         self.filteredCampers = []
         searchBar.delegate = self
+        
+//        let manager = SocketManager(socketURL: URL(string:"https://localhost:8080/")!)
+//        manager.connect()
         
         
     }

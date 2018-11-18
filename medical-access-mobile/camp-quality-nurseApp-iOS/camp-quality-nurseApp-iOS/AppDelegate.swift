@@ -11,14 +11,29 @@ import CoreData
 import SocketIO
 
 @UIApplicationMain
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let manager = SocketManager(socketURL: URL(string:"https://localhost:8080/")!)
-        manager.connect()
+        
+        struct CustomData : SocketData {
+            let origin: String
+            
+            func socketRepresentation() -> SocketData {
+                return ["origin": origin]
+            }
+        }
+        
+        let manager = SocketManager(socketURL: URL(string:"http://localhost:8080/")!)
+        let socket = manager.socket(forNamespace: "/")
+        socket.connect()
+        
+        socket.emit("confirmConnection", CustomData(origin: "adminMedicalMobile"))
+        
         
         return true
     }
