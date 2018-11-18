@@ -10,15 +10,6 @@ export default class LoginForm extends Component {
   _handleLogin = (e) => {
     e.preventDefault();
 
-    axios.get('https://localhost:3002/login')
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-
-
     // const options = {
     //   method: "POST",
     //   headers: {'content-type': 'application/json'},
