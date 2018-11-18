@@ -1,7 +1,7 @@
 import React from "react"
 
 
-export default const FormHealthHistory = props => (
+const FormHealthHistory = props => (
   <div>
     <div>
       <label>Operations: has your child had any operations?</label>
@@ -42,6 +42,6 @@ export default const FormHealthHistory = props => (
     </div>
 
   </div>
-
-
 )
+
+export default FormHealthHistory;
