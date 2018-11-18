@@ -38,3 +38,39 @@
   background-color: grey;
   text-align: center;
 }
+
+.forms {
+  margin-left: 50px;
+}
+
+.form-info--container {
+  margin: 15px 0 15px 0;
+}
+
+.health-history--container {
+  margin: 15px 0 15px 0;
+}
+
+.forms h2 {
+  margin: 10px 0 10px 0;
+}
+
+.forms label, select {
+  margin-right: 5px;
+}
+
+.forms p {
+  font-size: 24px;
+}
+
+.forms h2 {
+  font-size: 28px;
+}
+
+input[type="text"], input[type="textarea"], textarea, select, label {
+  font-size: 18px;
+}
+
+.button {
+  font-size: 55px;
+}

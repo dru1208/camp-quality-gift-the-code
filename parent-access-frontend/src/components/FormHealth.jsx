@@ -29,7 +29,7 @@ export default class FormHealth extends Component {
   }
 
   render(){
-    return <div className="healthForm">
+    return <div className="healthForm forms">
         <h2>Form Health</h2>
         <form>
           <div>
