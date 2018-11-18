@@ -3,7 +3,33 @@ import React, { Component } from 'react';
 export default class FormInfo extends Component {
   constructor(props){
     super(props)
-    this.state = { firstName: "", lastName: "", nickname: "", preferredPronoun: "", afterSchoolAndWeekendActivity: "", faveMovieMusicFood: "", ifICould: "", needToKnow: "", lookingForwardTo: "", bestCampEverIf: "", shirtSize: "", cqAmbassador: true, camperStatus: "", familyDoctor: "", oncologistSpecialist: "", hospital: "", stayingPositive: "", tryingNewThings: "", interactingWithPeers: "", makingCloseFriendships: "", developingHobbiesInterest: "", overcomingObstacles: "", selfCare: "", oneToOneSupport: false, IEP: false, travelArrangements: "" };
+    this.state = {
+      firstName: "",
+      lastName: "",
+      nickname: "",
+      preferredPronoun: "",
+      afterSchoolAndWeekendActivity: "",
+      faveMovieMusicFood: "",
+      ifICould: "",
+      needToKnow: "",
+      lookingForwardTo: "",
+      bestCampEverIf: "",
+      shirtSize: "extra-small",
+      cqAmbassador: true,
+      camperStatus: "returning_sibling",
+      familyDoctor: "",
+      oncologistSpecialist: "",
+      hospital: "",
+      stayingPositive: "every",
+      tryingNewThings: "every",
+      interactingWithPeers: "every",
+      makingCloseFriendships: "every",
+      developingHobbiesInterest: "every",
+      overcomingObstacles: "every",
+      selfCare: "every",
+      oneToOneSupport: true,
+      IEP: true,
+      travelArrangements: "" };
   }
 
   handleChange = prop => event => {
@@ -120,7 +146,6 @@ export default class FormInfo extends Component {
                 </label>
               </div>
             </div>
-
             <div className="more-info">
               <h2>More about you!</h2>
 
@@ -156,89 +181,6 @@ export default class FormInfo extends Component {
               </div>
 
               <br />
-              <br />
-
-              <p>
-                How would you rate your teenager's skills in the following
-                areas?
-              </p>
-
-              <label>
-                Staying positive
-                <select onChange={this.handleChange("stayingPositive")}>
-                  <option value="every">Every time</option>
-                  <option value="almost">Almost every time</option>
-                  <option value="occasionally">Occasionally</option>
-                </select>
-              </label>
-
-              <br />
-
-              <label>
-                Trying new things
-                <select onChange={this.handleChange("tryingNewThings")}>
-                  <option value="every">Every time</option>
-                  <option value="almost">Almost every time</option>
-                  <option value="occasionally">Occasionally</option>
-                </select>
-              </label>
-
-              <br />
-
-              <label>
-                Interacting with peers in a group
-                <select onChange={this.handleChange("interactingWithPeers")}>
-                  <option value="every">Every time</option>
-                  <option value="almost">Almost every time</option>
-                  <option value="occasionally">Occasionally</option>
-                </select>
-              </label>
-
-              <br />
-
-              <label>
-                Making close friendships
-                <select onChange={this.handleChange("makingCloseFriendships")}>
-                  <option value="every">Every time</option>
-                  <option value="almost">Almost every time</option>
-                  <option value="occasionally">Occasionally</option>
-                </select>
-              </label>
-
-              <br />
-
-              <label>
-                Developing hobbies and interest
-                <select onChange={this.handleChange("developingHobbiesInterest")}>
-                  <option value="every">Every time</option>
-                  <option value="almost">Almost every time</option>
-                  <option value="occasionally">Occasionally</option>
-                </select>
-              </label>
-
-              <br />
-
-              <label>
-                Overcoming obstacles
-                <select onChange={this.handleChange("overcomingObstacles")}>
-                  <option value="every">Every time</option>
-                  <option value="almost">Almost every time</option>
-                  <option value="occasionally">Occasionally</option>
-                </select>
-              </label>
-
-              <br />
-
-              <label>
-                Taking care of themselvers
-                <select onChange={this.handleChange("selfCare")}>
-                  <option value="every">Every time</option>
-                  <option value="almost">Almost every time</option>
-                  <option value="occasionally">Occasionally</option>
-                </select>
-              </label>
-
-              <br />
 
               <label>
                 Does your child need one-to-one support to take care of their needs?
@@ -264,8 +206,91 @@ export default class FormInfo extends Component {
                 </label>
                 <input type="textarea" required />
               </div>
+            <br />
 
-              <input type="submit" value="Submit" />
+            <p>
+              How would you rate your teenager's skills in the following
+              areas?
+            </p>
+
+            <label>
+              Staying positive
+              <select onChange={this.handleChange("stayingPositive")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
+
+            <br />
+
+            <label>
+              Trying new things
+              <select onChange={this.handleChange("tryingNewThings")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
+
+            <br />
+
+            <label>
+              Interacting with peers in a group
+              <select onChange={this.handleChange("interactingWithPeers")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
+
+            <br />
+
+            <label>
+              Making close friendships
+              <select onChange={this.handleChange("makingCloseFriendships")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
+
+            <br />
+
+            <label>
+              Developing hobbies and interest
+              <select onChange={this.handleChange("developingHobbiesInterest")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
+
+            <br />
+
+            <label>
+              Overcoming obstacles
+              <select onChange={this.handleChange("overcomingObstacles")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
+
+            <br />
+
+            <label>
+              Taking care of themselvers
+              <select onChange={this.handleChange("selfCare")}>
+                <option value="every">Every time</option>
+                <option value="almost">Almost every time</option>
+                <option value="occasionally">Occasionally</option>
+              </select>
+            </label>
+
+            <br />
+
+
             </div>
         </form>
       </div>;

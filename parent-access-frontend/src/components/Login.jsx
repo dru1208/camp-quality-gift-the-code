@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div>
-      <div>Login form</div>
       <div className="login-form">
         <div className="input-container">
           <label htmlFor="user_email">Email:</label>

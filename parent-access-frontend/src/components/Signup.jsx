@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
-  return <form>
+  return (
+    <form className="signupForm">
     <div className="parent-profile">
       <h2>Parent Profile</h2>
       <div className="form-info--container">
@@ -86,7 +87,8 @@ const Signup = () => {
         <input type="text" name="contact_work_number" />
       </div>
       </div>
-    </form>;
+    </form>
+    )
 };
 
 export default Signup;
