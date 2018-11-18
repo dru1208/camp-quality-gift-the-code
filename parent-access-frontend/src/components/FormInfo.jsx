@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class FormInfo extends Component {
   constructor(props){
     super(props)
-    this.state = { firstName: "", lastName: "", nickname: "", preferredPronoun: "", afterSchoolAndWeekendActivity: "", faveMovieMusicFood: "", ifICould: "", needToKnow: "", lookingForwardTo: "", bestCampEverIf: "", shirtSize: "", cqAmbassador: true, camperStatus: "", familyDoctor: "", oncologistSpecialist: "", hospital: "", stayingPositive: "", tryingNewThings: "", interactingWithPeers: "", makingCloseFriendships: "", developingHobbiesInterest: "", overcomingObstacles: "", selfCare: "", oneToOneSupport: false, IEP: false };
+    this.state = { firstName: "", lastName: "", nickname: "", preferredPronoun: "", afterSchoolAndWeekendActivity: "", faveMovieMusicFood: "", ifICould: "", needToKnow: "", lookingForwardTo: "", bestCampEverIf: "", shirtSize: "", cqAmbassador: true, camperStatus: "", familyDoctor: "", oncologistSpecialist: "", hospital: "", stayingPositive: "", tryingNewThings: "", interactingWithPeers: "", makingCloseFriendships: "", developingHobbiesInterest: "", overcomingObstacles: "", selfCare: "", oneToOneSupport: false, IEP: false, travelArrangements: "" };
   }
 
   handleChange = prop => event => {
@@ -12,12 +12,12 @@ export default class FormInfo extends Component {
     })
   }
 
-  handleSubmit = () => {
-    console.log(this.state)
+  handleSubmit = e => {
+    e.preventDefault()
+    this.props.updateInfo(this.state)
   }
 
   render(){
-    const { camperStatus, stayingPositive, tryingNewThings, interactingWithPeers, makingCloseFriendships, developingHobbiesInterest, overcomingObstacles, selfCare, oneToOneSupport, IEP } = this.state;
     return <div className="form-info">
         <form onSubmit={this.handleSubmit}>
           <div className="all-about-me">
@@ -140,19 +140,19 @@ export default class FormInfo extends Component {
 
             <div className="form-info--container">
               <label htmlFor="family_doctor">Family Doctor:</label>
-            <input type="text" name="family_doctor" onChange={this.handleChange("familyDoctor")} required/>
+              <input type="text" name="family_doctor" onChange={this.handleChange("familyDoctor")} required />
             </div>
 
             <div className="form-info--container">
               <label htmlFor="oncologist_specialist">
                 Oncologist/Specialist:
               </label>
-            <input type="text" name="oncologist_specialist" onChange={this.handleChange("oncologistSpecialist")} required />
+              <input type="text" name="oncologist_specialist" onChange={this.handleChange("oncologistSpecialist")} required />
             </div>
 
             <div className="form-info--container">
               <label htmlFor="hospital">Hospital:</label>
-            <input type="text" name="hospital" onChange={this.handleChange("hospital")} required />
+              <input type="text" name="hospital" onChange={this.handleChange("hospital")} required />
             </div>
 
             <br />
@@ -187,7 +187,7 @@ export default class FormInfo extends Component {
 
             <label>
               Interacting with peers in a group
-              <select value={interactingWithPeers}>
+              <select onChange={this.handleChange("interactingWithPeers")}>
                 <option value="every">Every time</option>
                 <option value="almost">Almost every time</option>
                 <option value="occasionally">Occasionally</option>
@@ -198,7 +198,7 @@ export default class FormInfo extends Component {
 
             <label>
               Making close friendships
-              <select value={makingCloseFriendships}>
+              <select onChange={this.handleChange("makingCloseFriendships")}>
                 <option value="every">Every time</option>
                 <option value="almost">Almost every time</option>
                 <option value="occasionally">Occasionally</option>
@@ -209,7 +209,7 @@ export default class FormInfo extends Component {
 
             <label>
               Developing hobbies and interest
-              <select value={developingHobbiesInterest}>
+              <select onChange={this.handleChange("developingHobbiesInterest")}>
                 <option value="every">Every time</option>
                 <option value="almost">Almost every time</option>
                 <option value="occasionally">Occasionally</option>
@@ -220,7 +220,7 @@ export default class FormInfo extends Component {
 
             <label>
               Overcoming obstacles
-              <select value={overcomingObstacles}>
+              <select onChange={this.handleChange("overcomingObstacles")}>
                 <option value="every">Every time</option>
                 <option value="almost">Almost every time</option>
                 <option value="occasionally">Occasionally</option>
@@ -231,7 +231,7 @@ export default class FormInfo extends Component {
 
             <label>
               Taking care of themselvers
-              <select value={selfCare}>
+              <select onChange={this.handleChange("selfCare")}>
                 <option value="every">Every time</option>
                 <option value="almost">Almost every time</option>
                 <option value="occasionally">Occasionally</option>
@@ -242,9 +242,9 @@ export default class FormInfo extends Component {
 
             <label>
               Does your child need one-to-one support to take care of their needs?
-              <select value={oneToOneSupport}>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
+              <select onChange={this.handleChange("oneToOneSupport")}>
+                <option value={true}>Yes</option>
+                <option value={false}>No</option>
               </select>
             </label>
 
@@ -252,9 +252,9 @@ export default class FormInfo extends Component {
 
             <label>
               Does your child have an IEP (Individual Education Plan)?
-              <select value={IEP}>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
+              <select onChange={this.handleChange("IEP")}>
+                <option value={true}>Yes</option>
+                <option value={false}>No</option>
               </select>
             </label>
 
