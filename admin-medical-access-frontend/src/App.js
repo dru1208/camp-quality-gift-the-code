@@ -53,7 +53,7 @@ class App extends Component {
       method: "POST",
       headers: {'content-type': 'application/json'},
       data: loginInfo,
-      url: 'https://localhost:3002/login/'
+      url: 'http://localhost:3002/login/'
     }
     axios(options)
       .then(response => {
