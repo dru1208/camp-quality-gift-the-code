@@ -23,6 +23,8 @@
 		46BFA80421A011D600F6DB3B /* CamperDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */; };
 		46BFA80621A0541900F6DB3B /* Treatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA80521A0541900F6DB3B /* Treatment.swift */; };
 		46BFA81021A13F1000F6DB3B /* TreatmentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFA80F21A13F1000F6DB3B /* TreatmentViewCell.swift */; };
+		46E3518921A4206C00EBCF7B /* BlackHanSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E3518821A4206B00EBCF7B /* BlackHanSans-Regular.ttf */; };
+		46E3518B21A4207200EBCF7B /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46E3518A21A4207200EBCF7B /* LuckiestGuy-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		46BFA80321A011D600F6DB3B /* CamperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamperDetailViewController.swift; sourceTree = "<group>"; };
 		46BFA80521A0541900F6DB3B /* Treatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treatment.swift; sourceTree = "<group>"; };
 		46BFA80F21A13F1000F6DB3B /* TreatmentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentViewCell.swift; sourceTree = "<group>"; };
+		46E3518821A4206B00EBCF7B /* BlackHanSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BlackHanSans-Regular.ttf"; sourceTree = "<group>"; };
+		46E3518A21A4207200EBCF7B /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
 		4F85BB177959EE8DF70CA923 /* Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOSTests/Pods-camp-quality-nurseApp-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DFE297AD045AEC174C32533 /* Pods-camp-quality-nurseApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOS/Pods-camp-quality-nurseApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A0E42B3327261B390F929642 /* Pods-camp-quality-nurseApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-quality-nurseApp-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp-quality-nurseApp-iOS/Pods-camp-quality-nurseApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				46BFA802219FFF0300F6DB3B /* Views */,
 				46BFA7E2219FF20500F6DB3B /* Assets.xcassets */,
 				46BFA7E4219FF20500F6DB3B /* LaunchScreen.storyboard */,
+				46E3518821A4206B00EBCF7B /* BlackHanSans-Regular.ttf */,
+				46E3518A21A4207200EBCF7B /* LuckiestGuy-Regular.ttf */,
 				46BFA7E7219FF20500F6DB3B /* Info.plist */,
 				46BDD3C121A1939E00B542BE /* GoogleService-Info.plist */,
 			);
@@ -256,6 +262,8 @@
 				46BDD3C221A1939E00B542BE /* GoogleService-Info.plist in Resources */,
 				46BFA7E3219FF20500F6DB3B /* Assets.xcassets in Resources */,
 				46BFA7DE219FF20400F6DB3B /* Main.storyboard in Resources */,
+				46E3518921A4206C00EBCF7B /* BlackHanSans-Regular.ttf in Resources */,
+				46E3518B21A4207200EBCF7B /* LuckiestGuy-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

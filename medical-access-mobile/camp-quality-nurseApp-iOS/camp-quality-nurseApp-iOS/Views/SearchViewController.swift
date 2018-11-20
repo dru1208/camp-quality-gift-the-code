@@ -15,6 +15,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var camperTableView: UITableView!
 
+
     var isFiltering = false
 
     var campers = [Camper]()
@@ -26,7 +27,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         configureDatabase()
         searchBar.delegate = self
-        
         super.viewDidLoad()
 
         
@@ -81,7 +81,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return camperTableView.frame.height/6
+        return camperTableView.frame.height/4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
