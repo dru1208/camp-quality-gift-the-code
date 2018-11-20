@@ -22,6 +22,7 @@ class TreatmentDetailViewController: UIViewController {
         treatmentLabel.text = treatment?.medication
         updateButton.layer.cornerRadius = 5
         
+        
         if (treatment?.beenAdministered)! {
             updateButton.setTitle("Administered!", for: .normal)
         } else {
@@ -31,15 +32,16 @@ class TreatmentDetailViewController: UIViewController {
     
     @IBAction func updatePressed(_ sender: UIButton) {
         
-//        if (treatment?.beenAdministered)! {
-//            updateButton.setTitle("Press To Update", for: .normal)
-//            database.child("treatment/" + (camperID ?? "") + "/" + (treatment?.sessionID + "/")).setValue(["beenAdministered": false])
-//            treatment?.beenAdministered = false
-//        } else {
-//            updateButton.setTitle("Administered!", for: .normal)
-//            database.child("treatment/" + (camperID ?? "") + "/" + (treatment?.sessionID + "/")).setValue(["beenAdministered": true])
-//            treatment?.beenAdministered = true
-//        }
+        if (treatment?.beenAdministered)! {
+            updateButton.setTitle("Press To Update", for: .normal)
+            database.child("treatment").child("\(camperID ?? "")/\(treatment?.sessionID ?? "")").updateChildValues(["beenAdministered": false])
+            treatment?.beenAdministered = false
+        } else {
+            updateButton.setTitle("Administered!", for: .normal)
+            database.child("treatment").child("\(camperID ?? "")/\(treatment?.sessionID ?? "")").updateChildValues(["beenAdministered": true])
+            treatment?.beenAdministered = true
+        
+        }
     }
     
 }

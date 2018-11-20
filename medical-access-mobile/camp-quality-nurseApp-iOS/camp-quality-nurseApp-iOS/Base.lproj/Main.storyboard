@@ -143,7 +143,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ph-0D-5We">
                                         <rect key="frame" x="133.5" y="0.0" width="241.5" height="133.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxw-vm-4Ae">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxw-vm-4Ae">
                                                 <rect key="frame" x="25" y="50" width="191.5" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <nil key="textColor"/>
@@ -159,7 +159,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.79656437054503382" green="0.79656437054503382" blue="0.79656437054503382" alpha="0.88596960616438358" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="yci-zV-OsG" firstAttribute="height" secondItem="fcO-wF-jix" secondAttribute="height" id="4ZG-ep-SU5"/>
                                     <constraint firstItem="5ph-0D-5We" firstAttribute="leading" secondItem="yci-zV-OsG" secondAttribute="trailing" id="BuA-1a-SFj"/>

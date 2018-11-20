@@ -39,7 +39,7 @@ class CamperDetailViewController: UIViewController, UITableViewDelegate, UITable
       //  self.treatments = []
         configureDatabase()
         camperimageView.image = camper?.image
-        camperNameLabel.text = (camper?.firstName)! + " " + (camper?.lastName)!
+        camperNameLabel.text = camper?.name
         diagnosisLabel.text = "Diagnosis: " + (camper?.primaryDiagnosis)!
         allergiesLabel.text = "Allergies: " + (camper?.allergies)!
         

@@ -17,8 +17,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     var isFiltering = false
 
-    var campers: [Camper]?
-    var filteredCampers: [Camper]?
+    var campers = [Camper]()
+    var filteredCampers = [Camper]()
     let database = DatabaseReference()
    
     
@@ -29,8 +29,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         
         configureDatabase()
-        self.campers = []
-        self.filteredCampers = []
         searchBar.delegate = self
         
         super.viewDidLoad()
@@ -44,14 +42,21 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return campers?.count ?? 0
+        if isFiltering {
+            return filteredCampers.count
+        } else {
+            return campers.count
+        }
 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "camperCell") as! CamperViewCell
-        
-        cell.configureCell(camper: campers![indexPath.row])
+        if isFiltering {
+            cell.configureCell(camper: filteredCampers[indexPath.row])
+        } else {
+            cell.configureCell(camper: campers[indexPath.row])
+        }
         
         return cell
     }
@@ -65,7 +70,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-
+        if searchBar.text != "" {
+            isFiltering = true
+            filteredCampers = campers.filter({( camper : Camper) -> Bool in
+                return camper.name.lowercased().contains(searchText.lowercased())
+            })
+        } else {
+            isFiltering = false
+        }
         
         camperTableView.reloadData()
 
@@ -90,7 +102,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let otcPermitted = camper["otcPermitted"] as! Bool
         let primaryDiagnosis = camper["primaryDiagnosis"] as! String
         
-        self.campers?.append(Camper(id: id, firstName: firstName, lastName: lastName, primaryDiagnosis: primaryDiagnosis, notes: notes, otcPremitted: otcPermitted, allergies: allergies))
+        self.campers.append(Camper(id: id, firstName: firstName, lastName: lastName, primaryDiagnosis: primaryDiagnosis, notes: notes, otcPremitted: otcPermitted, allergies: allergies))
         
         camperTableView.reloadData()
         

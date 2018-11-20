@@ -8,6 +8,7 @@ target 'camp-quality-nurseApp-iOS' do
   # Pods for camp-quality-nurseApp-iOS
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   target 'camp-quality-nurseApp-iOSTests' do
     inherit! :search_paths
     # Pods for testing
