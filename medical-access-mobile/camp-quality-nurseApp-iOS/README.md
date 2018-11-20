@@ -35,3 +35,9 @@ pod install
 ### Acknowledgments
 
 Special thanks to The Best Friends Club, my team for the Gift The code Hackathon.
+
+### Screenshots
+
+![Alt text](Screenshots/medbayLandingPage.png?raw=true "Landing Page")
+
+More Screenshots to come! Currently in the middle of UI revamp.
