@@ -36,8 +36,12 @@ class CamperDetailViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      //  self.treatments = []
         configureDatabase()
+        setupUI()
+        
+    }
+    
+    func setupUI(){
         camperimageView.image = camper?.image
         camperNameLabel.text = camper?.name
         diagnosisLabel.text = "Diagnosis: " + (camper?.primaryDiagnosis)!
@@ -54,9 +58,9 @@ class CamperDetailViewController: UIViewController, UITableViewDelegate, UITable
         camperimageView.clipsToBounds = true
         camperimageView.contentMode = .scaleToFill
         popupHeight = camperInfoContainer.frame.height
-        
-        
     }
+    
+    // MARK: Button Actions
     
     @IBAction func medicationButtonPressed(_ sender: UIButton) {
         if showMedication {
@@ -69,6 +73,8 @@ class CamperDetailViewController: UIViewController, UITableViewDelegate, UITable
             showMedicationButton.setTitle("Hide Schedule", for: .normal)
         }
     }
+    
+    // MARK: Data
     
     func configureDatabase() {
         let database = Database.database().reference()
@@ -84,7 +90,6 @@ class CamperDetailViewController: UIViewController, UITableViewDelegate, UITable
             let dict = DataSnapshot.value as! NSDictionary
             let id = DataSnapshot.key
             self.updateTreatment(treatment: dict, id: id)
-            
         }
         
     }
@@ -123,6 +128,8 @@ class CamperDetailViewController: UIViewController, UITableViewDelegate, UITable
         treatmentsTableView.reloadData()
     }
     
+    // MARK: TableView Delegate
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return treatments.count
@@ -140,13 +147,15 @@ class CamperDetailViewController: UIViewController, UITableViewDelegate, UITable
         return treatmentsTableView.frame.height/5
     }
     
+    // MARK: Segues
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTreatment" {
             let tableViewCell = sender as! TreatmentViewCell
             let viewController = segue.destination as! TreatmentDetailViewController
            viewController.treatment = tableViewCell.treatment
            viewController.camperID = camper?.id
-     }
+      }
     }
     
 }

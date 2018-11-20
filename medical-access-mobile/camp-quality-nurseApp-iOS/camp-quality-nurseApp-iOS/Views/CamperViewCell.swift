@@ -18,16 +18,6 @@ class CamperViewCell: UITableViewCell {
     var camper: Camper?
     let storageRef = Storage.storage().reference()
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func configureCell(camper: Camper) {
         self.camper = camper
