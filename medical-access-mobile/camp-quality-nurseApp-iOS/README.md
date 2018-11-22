@@ -35,3 +35,9 @@ pod install
 ### Acknowledgments
 
 Special thanks to The Best Friends Club, my team for the Gift The code Hackathon.
+
+### Screenshots
+
+<img src="https://github.com/dru1208/camp-quality-gift-the-code/blob/master/medical-access-mobile/camp-quality-nurseApp-iOS/Screenshots/medbayLandingPage.png" width="280" height="500">
+
+More Screenshots to come! Currently in the middle of UI revamp.
