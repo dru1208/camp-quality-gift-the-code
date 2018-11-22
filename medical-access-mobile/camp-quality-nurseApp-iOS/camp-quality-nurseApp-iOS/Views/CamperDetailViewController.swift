@@ -23,9 +23,14 @@ class CamperDetailViewController: UIViewController, UITableViewDelegate, UITable
 
 
     @IBOutlet weak var treatmentsTableView: UITableView!
+    
+    
+    @IBOutlet weak var detailsContainer: UIView!
     @IBOutlet weak var allergiesLabel: UILabel!
     @IBOutlet weak var diagnosisLabel: UILabel!
     @IBOutlet weak var otcLabel: UILabel!
+    
+    @IBOutlet weak var camperNotesTextView: UITextView!
     
     var showMedication = false
     var popupHeight: CGFloat?
@@ -53,11 +58,19 @@ class CamperDetailViewController: UIViewController, UITableViewDelegate, UITable
             otcLabel.text = "No Over The Counter Medication"
         }
         
+        camperimageView.layer.borderWidth = 4
+        camperimageView.layer.borderColor = UIColor.white.cgColor
         camperimageView.layer.masksToBounds = false
         camperimageView.layer.cornerRadius = camperimageView.frame.size.width / 2
+        //camperimageView.layer.cornerRadius = 5
         camperimageView.clipsToBounds = true
         camperimageView.contentMode = .scaleToFill
         popupHeight = camperInfoContainer.frame.height
+        
+        detailsContainer.layer.cornerRadius = 5
+        camperNotesTextView.layer.borderColor = UIColor(red: 0, green: 156/255, blue: 144/255, alpha: 0.60).cgColor
+        camperNotesTextView.layer.borderWidth = 5
+        camperNotesTextView.layer.cornerRadius = 5
     }
     
     // MARK: Button Actions

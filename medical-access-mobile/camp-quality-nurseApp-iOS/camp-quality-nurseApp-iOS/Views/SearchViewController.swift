@@ -76,12 +76,16 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touch")
+    }
+    
     
     // MARK: TableView Delegates
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return camperTableView.frame.height/4
+        return camperTableView.frame.height/5   
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
