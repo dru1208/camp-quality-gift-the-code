@@ -2,6 +2,10 @@
 
 A medical charting app built for Camp Quality. This app is able to display a list of campers in the database along with their medication schedule. This app will allow nurses to check for each camper's medication schedule as well as update in real-time whether the medication has already been administered.
 
+### Camp Quality
+
+Camp Quality strives to provide empowering camp experiences for kids with cancer. Their philosophy is that together, we can do anything, be anything and achieve everything. We have the power to turn life’s challenges into adventures.
+
 ## Pre-requisites
 
 - XCode
